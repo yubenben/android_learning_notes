@@ -1,6 +1,6 @@
 #Drawable Animation
-Drawable Animation( Frame Animation ): Ö¡¶¯»­£¬Ïñ·ÅµçÓ°Ò»ÑùÒ»Ö¡Ö¡µÄ²¥·ÅÍ¼Æ¬µÄĞÎÊ½Õ¹ÏÖ¶¯»­¡£
-ÔÚxmlÖĞÊµÏÖ´úÂë£º
+Drawable Animation( Frame Animation ): å¸§åŠ¨ç”»ï¼Œåƒæ”¾ç”µå½±ä¸€æ ·ä¸€å¸§å¸§çš„æ’­æ”¾å›¾ç‰‡çš„å½¢å¼å±•ç°åŠ¨ç”»ã€‚
+åœ¨xmlä¸­å®ç°ä»£ç ï¼š
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -11,8 +11,8 @@ Drawable Animation( Frame Animation ): Ö¡¶¯»­£¬Ïñ·ÅµçÓ°Ò»ÑùÒ»Ö¡Ö¡µÄ²¥·ÅÍ¼Æ¬µÄĞÎÊ
     <item android:drawable="@drawable/rocket_thrust3" android:duration="200" />
 </animation-list>
 ```
-android:oneshot ÎªtrueÊÇ¶¯»­Ö»Ö´ĞĞÒ»´Î£¬falseÊ±Ñ­»·Ö´ĞĞ¡£Ò»¸öitem±íÊ¾Ò»¸öÍ¼Æ¬£¬android:duration ÎªÕâ¸öÖ¡µÄÏÔÊ¾Ê±¼ä¡£
-Ê¹ÓÃ·½·¨£º
+android:oneshot ä¸ºtrueæ˜¯åŠ¨ç”»åªæ‰§è¡Œä¸€æ¬¡ï¼Œfalseæ—¶å¾ªç¯æ‰§è¡Œã€‚ä¸€ä¸ªitemè¡¨ç¤ºä¸€ä¸ªå›¾ç‰‡ï¼Œandroid:duration ä¸ºè¿™ä¸ªå¸§çš„æ˜¾ç¤ºæ—¶é—´ã€‚
+ä½¿ç”¨æ–¹æ³•ï¼š
 
 ```java
 ImageView rocketImage = (ImageView) findViewById(R.id.rocket_image);
@@ -21,10 +21,10 @@ rocketImage.setBackgroundResource(R.drawable.rocket_thrust);
 rocketAnimation = (AnimationDrawable) rocketImage.getBackground();
 rocketAnimation.start();
 ```
-²»ÒªÔÚonCreateÖĞµ÷ÓÃstart£¬ÒòÎªAnimationDrawable»¹Ã»ÓĞÍêÈ«¸úWindowÏà¹ØÁª£¬Èç¹ûÏëÒª½çÃæÏÔÊ¾Ê±¾Í¿ªÊ¼¶¯»­µÄ»°£¬¿ÉÒÔÔÚonWindowFoucsChanged()ÖĞµ÷ÓÃstart()¡£
+ä¸è¦åœ¨onCreateä¸­è°ƒç”¨startï¼Œå› ä¸ºAnimationDrawableè¿˜æ²¡æœ‰å®Œå…¨è·ŸWindowç›¸å…³è”ï¼Œå¦‚æœæƒ³è¦ç•Œé¢æ˜¾ç¤ºæ—¶å°±å¼€å§‹åŠ¨ç”»çš„è¯ï¼Œå¯ä»¥åœ¨onWindowFoucsChanged()ä¸­è°ƒç”¨start()ã€‚
 
 #View Animation
-View Animation £¨ Tween Animation £©£º²¹¼ä¶¯»­£¬Ö¸¶¨view¿ªÊ¼ºÍ½áÊøµÄĞÎ×´ËµÃ÷£¬ÔÚÖ¸¶¨Ê±¼äÄÚ½¥±äµÄ¶¯»­Ğ§¹û£¬°üÀ¨ViewµÄÎ»ÖÃ(position)£¬´óĞ¡(size)£¬Ğı×ª(rotation)£¬ºÍÍ¸Ã÷¶È(transparency)¡£Ö»ÄÜÓÃÓÚView¡£Í¨³£Ê¹ÓÃxmlÊµÏÖ¶¯»­¡£
+View Animation ï¼ˆ Tween Animation ï¼‰ï¼šè¡¥é—´åŠ¨ç”»ï¼ŒæŒ‡å®šviewå¼€å§‹å’Œç»“æŸçš„å½¢çŠ¶è¯´æ˜ï¼Œåœ¨æŒ‡å®šæ—¶é—´å†…æ¸å˜çš„åŠ¨ç”»æ•ˆæœï¼ŒåŒ…æ‹¬Viewçš„ä½ç½®(position)ï¼Œå¤§å°(size)ï¼Œæ—‹è½¬(rotation)ï¼Œå’Œé€æ˜åº¦(transparency)ã€‚åªèƒ½ç”¨äºViewã€‚é€šå¸¸ä½¿ç”¨xmlå®ç°åŠ¨ç”»ã€‚
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -57,31 +57,31 @@ View Animation £¨ Tween Animation £©£º²¹¼ä¶¯»­£¬Ö¸¶¨view¿ªÊ¼ºÍ½áÊøµÄĞÎ×´ËµÃ÷£¬ÔÚ
 </set>
 ```
 
- - set °üº¬¶¯»­µÄ¼¯ºÏ
-    - android:interpolator  Ö¸¶¨¶¯»­µÄ½¥±ä·½Ê½£¨±ä»¯ËÙ¶È£©
-    - android:shareInterpolator ÎªtrueÊ±£¬¼¯ºÏÄÚµÄÔªËØ¹²ÏíÒ»¸öinterpolate
- - alpha Í¸Ã÷¶È±ä»¯
-   - android:fromAlpha ¿ªÊ¼µÄÍ¸Ã÷¶È£¬0.0´ú±íÍêÈ«Í¸Ã÷  1.0´ú±íÍêÈ«²»Í¸Ã÷
-   - android:toAlpha ½áÊøÊ±µÄÍ¸Ã÷¶È
- - scale ÉìËõ¶¯»­
-   - android:fromXScale   ¿ªÊ¼µÄxÆ«ÒÆÁ¿£¬1.0´ú±íÃ»ÓĞ±ä»¯
+ - set åŒ…å«åŠ¨ç”»çš„é›†åˆ
+    - android:interpolator  æŒ‡å®šåŠ¨ç”»çš„æ¸å˜æ–¹å¼ï¼ˆå˜åŒ–é€Ÿåº¦ï¼‰
+    - android:shareInterpolator ä¸ºtrueæ—¶ï¼Œé›†åˆå†…çš„å…ƒç´ å…±äº«ä¸€ä¸ªinterpolate
+ - alpha é€æ˜åº¦å˜åŒ–
+   - android:fromAlpha å¼€å§‹çš„é€æ˜åº¦ï¼Œ0.0ä»£è¡¨å®Œå…¨é€æ˜  1.0ä»£è¡¨å®Œå…¨ä¸é€æ˜
+   - android:toAlpha ç»“æŸæ—¶çš„é€æ˜åº¦
+ - scale ä¼¸ç¼©åŠ¨ç”»
+   - android:fromXScale   å¼€å§‹çš„xåç§»é‡ï¼Œ1.0ä»£è¡¨æ²¡æœ‰å˜åŒ–
    - android:toXScale
    - android:fromYScale
    - android:toYScale
-   - android:pivotX ÉìËõ±ä»¯Ê±£¬xÖá±£³Ö²»±äµÄ×ø±ê
+   - android:pivotX ä¼¸ç¼©å˜åŒ–æ—¶ï¼Œxè½´ä¿æŒä¸å˜çš„åæ ‡
    - android:pivotY
- - translate ´¹Ö±»òÕßË®Æ½µÄÔË¶¯ ÊôĞÔÀïÃæµÄÖµÓĞÈıÖÖ¸ñÊ½£º-100%~100%´ú±íÏà¶ÔÓÚ×ÔÉíµÄ±ÈÀı£»-100%p~100%p±íÊ¾Ïà¶ÔÓÚ¸¸ÊÓÍ¼µÄ±ÈÀı£»Ã»ÓĞºó×ºµÄfloatÖµ¾Í´ú±í¾ø¶Ô±ä»¯Á¿
-     - android:fromXDelta   xÖá¿ªÊ¼µÄÆ«ÒÆÁ¿FloatÖµ»òÕß°Ù·Ö±È
+ - translate å‚ç›´æˆ–è€…æ°´å¹³çš„è¿åŠ¨ å±æ€§é‡Œé¢çš„å€¼æœ‰ä¸‰ç§æ ¼å¼ï¼š-100%~100%ä»£è¡¨ç›¸å¯¹äºè‡ªèº«çš„æ¯”ä¾‹ï¼›-100%p~100%pè¡¨ç¤ºç›¸å¯¹äºçˆ¶è§†å›¾çš„æ¯”ä¾‹ï¼›æ²¡æœ‰åç¼€çš„floatå€¼å°±ä»£è¡¨ç»å¯¹å˜åŒ–é‡
+     - android:fromXDelta   xè½´å¼€å§‹çš„åç§»é‡Floatå€¼æˆ–è€…ç™¾åˆ†æ¯”
      - android:toXDelta
      - android:fromYDelta
      - android:toYDelta
- - rotate Ğı×ª¶¯»­
-     - android:fromDegrees ¿ªÊ¼µÄ½Ç¶È
-     - android:toDegrees ½áÊøµÄ½Ç¶È
-     - android:pivotX  Ğı×ªÔ²ĞÄxÖá×ø±ê  5±íÊ¾¾àview×ó±ßÔµ5ÏñËØ£¬5%±íÊ¾¾àview×ó±ßÔµµÄ°Ù·Ö±È5%p±íÊ¾¾àÀë¸¸View µÄ×ó±ßÔµµÄ°Ù·Ö±È
-     - android:pivotY Ğı×ªÔ²ĞÄyÖá×ø±ê
+ - rotate æ—‹è½¬åŠ¨ç”»
+     - android:fromDegrees å¼€å§‹çš„è§’åº¦
+     - android:toDegrees ç»“æŸçš„è§’åº¦
+     - android:pivotX  æ—‹è½¬åœ†å¿ƒxè½´åæ ‡  5è¡¨ç¤ºè·viewå·¦è¾¹ç¼˜5åƒç´ ï¼Œ5%è¡¨ç¤ºè·viewå·¦è¾¹ç¼˜çš„ç™¾åˆ†æ¯”5%pè¡¨ç¤ºè·ç¦»çˆ¶View çš„å·¦è¾¹ç¼˜çš„ç™¾åˆ†æ¯”
+     - android:pivotY æ—‹è½¬åœ†å¿ƒyè½´åæ ‡
 
-Àı×Ó£º
+ä¾‹å­ï¼š
 
 ```xml
 <set xmlns:android="http://schemas.android.com/apk/res/android"
@@ -125,9 +125,9 @@ image.startAnimation(hyperspaceJump);
 ```
 
 #Property Animation
-ÊôĞÔ¶¯»­£¬ÔÚAndroid 3.0£¨API 11£©ÖĞÒıÈë£¬Ëü¸ü¸ÄµÄÊÇ¶ÔÏóµÄÊµ¼ÊÊôĞÔ¡£ÔÚView AnimationÖĞµÄ¶¯»­Ğ§¹ûÖ»ÊÇ¸ü¸ÄÁËViewÔÚparentÖĞ»æÖÆµÄ»æÖÆ²ÎÊı£¬ViewµÄÊµ¼ÊÊôĞÔ²¢Ã»ÓĞ±ä»¯¡£
+å±æ€§åŠ¨ç”»ï¼Œåœ¨Android 3.0ï¼ˆAPI 11ï¼‰ä¸­å¼•å…¥ï¼Œå®ƒæ›´æ”¹çš„æ˜¯å¯¹è±¡çš„å®é™…å±æ€§ã€‚åœ¨View Animationä¸­çš„åŠ¨ç”»æ•ˆæœåªæ˜¯æ›´æ”¹äº†Viewåœ¨parentä¸­ç»˜åˆ¶çš„ç»˜åˆ¶å‚æ•°ï¼ŒViewçš„å®é™…å±æ€§å¹¶æ²¡æœ‰å˜åŒ–ã€‚
 ##ValueAnimator
-ValueAnimator°üº¬Property Animation¶¯»­µÄËùÓĞºËĞÄ¹¦ÄÜ£¬Èç¶¯»­Ê±¼ä£¬¿ªÊ¼¡¢½áÊøÊôĞÔÖµ£¬ÏàÓ¦Ê±¼äÊôĞÔÖµ¼ÆËã·½·¨µÈ¡£Í¨¹ıÊµÏÖValueAnimator.onUpdateListener½Ó¿Ú£¬À´ÉèÖÃµ±Ç°¶ÔÏóÊôĞÔ¡£
+ValueAnimatoråŒ…å«Property AnimationåŠ¨ç”»çš„æ‰€æœ‰æ ¸å¿ƒåŠŸèƒ½ï¼Œå¦‚åŠ¨ç”»æ—¶é—´ï¼Œå¼€å§‹ã€ç»“æŸå±æ€§å€¼ï¼Œç›¸åº”æ—¶é—´å±æ€§å€¼è®¡ç®—æ–¹æ³•ç­‰ã€‚é€šè¿‡å®ç°ValueAnimator.onUpdateListeneræ¥å£ï¼Œæ¥è®¾ç½®å½“å‰å¯¹è±¡å±æ€§ã€‚
 
 ```
 ValueAnimator animation = ValueAnimator.ofFloat(0f, 1f);
@@ -141,15 +141,15 @@ animation.addUpdateListener(new AnimatorUpdateListener() {
 animation.setInterpolator(new CycleInterpolator(3));
 animation.start();
 ```
-Õâ¸ö½Ó¿ÚÖ»ÓĞÒ»¸öº¯ÊıonAnimationUpdate()£¬ÔÚÕâ¸öº¯ÊıÖĞ»á´«ÈëValueAnimator¶ÔÏó×öÎª²ÎÊı£¬Í¨¹ıÕâ¸öValueAnimator¶ÔÏóµÄgetAnimatedValue()º¯Êı¿ÉÒÔµÃµ½µ±Ç°µÄÊôĞÔÖµ¡£
+è¿™ä¸ªæ¥å£åªæœ‰ä¸€ä¸ªå‡½æ•°onAnimationUpdate()ï¼Œåœ¨è¿™ä¸ªå‡½æ•°ä¸­ä¼šä¼ å…¥ValueAnimatorå¯¹è±¡åšä¸ºå‚æ•°ï¼Œé€šè¿‡è¿™ä¸ªValueAnimatorå¯¹è±¡çš„getAnimatedValue()å‡½æ•°å¯ä»¥å¾—åˆ°å½“å‰çš„å±æ€§å€¼ã€‚
 
 ##ObjectAnimator
-¼Ì³Ğ×ÔValueAnimator£¬ÒªÖ¸¶¨Ò»¸ö¶ÔÏó¼°¸Ã¶ÔÏóµÄÒ»¸öÊôĞÔ£¬µ±ÊôĞÔÖµ¼ÆËãÍê³ÉÊ±×Ô¶¯ÉèÖÃÎª¸Ã¶ÔÏóµÄÏàÓ¦ÊôĞÔ£¬¼´Íê³ÉÁËProperty AnimationµÄÈ«²¿Á½²½²Ù×÷¡£
-Êµ¼ÊÓ¦ÓÃÖĞÒ»°ã¶¼»áÓÃObjectAnimatorÀ´¸Ä±äÄ³Ò»¶ÔÏóµÄÄ³Ò»ÊôĞÔ£¬µ«ÓÃObjectAnimatorÓĞÒ»¶¨µÄÏŞÖÆ£¬ÒªÏëÊ¹ÓÃObjectAnimator£¬Ó¦¸ÃÂú×ãÒÔÏÂÌõ¼ş£º
+ç»§æ‰¿è‡ªValueAnimatorï¼Œè¦æŒ‡å®šä¸€ä¸ªå¯¹è±¡åŠè¯¥å¯¹è±¡çš„ä¸€ä¸ªå±æ€§ï¼Œå½“å±æ€§å€¼è®¡ç®—å®Œæˆæ—¶è‡ªåŠ¨è®¾ç½®ä¸ºè¯¥å¯¹è±¡çš„ç›¸åº”å±æ€§ï¼Œå³å®Œæˆäº†Property Animationçš„å…¨éƒ¨ä¸¤æ­¥æ“ä½œã€‚
+å®é™…åº”ç”¨ä¸­ä¸€èˆ¬éƒ½ä¼šç”¨ObjectAnimatoræ¥æ”¹å˜æŸä¸€å¯¹è±¡çš„æŸä¸€å±æ€§ï¼Œä½†ç”¨ObjectAnimatoræœ‰ä¸€å®šçš„é™åˆ¶ï¼Œè¦æƒ³ä½¿ç”¨ObjectAnimatorï¼Œåº”è¯¥æ»¡è¶³ä»¥ä¸‹æ¡ä»¶ï¼š
 
- - ¶ÔÏóÓ¦¸ÃÓĞÒ»¸ösetterº¯Êı£ºset[PropertyName]£¨ÍÕ·åÃüÃû·¨£©
- - Èç¹ûÊ¹ÓÃofFloatÖ®ÀàµÄ¹¤³¡·½·¨£¬±ØĞëÒªÓĞ¸Ã¶ÔÏóÒªÓĞÏàÓ¦ÊôĞÔµÄgetter·½·¨get[PropertyName]
- - Èç¹ûÓĞgetter·½·¨£¬ÆäÓ¦·µ»ØÖµÀàĞÍÓ¦ÓëÏàÓ¦µÄsetter·½·¨µÄ²ÎÊıÀàĞÍÒ»ÖÂ¡£
+ - å¯¹è±¡åº”è¯¥æœ‰ä¸€ä¸ªsetterå‡½æ•°ï¼šset[PropertyName]ï¼ˆé©¼å³°å‘½åæ³•ï¼‰
+ - å¦‚æœä½¿ç”¨ofFloatä¹‹ç±»çš„å·¥åœºæ–¹æ³•ï¼Œå¿…é¡»è¦æœ‰è¯¥å¯¹è±¡è¦æœ‰ç›¸åº”å±æ€§çš„getteræ–¹æ³•get[PropertyName]
+ - å¦‚æœæœ‰getteræ–¹æ³•ï¼Œå…¶åº”è¿”å›å€¼ç±»å‹åº”ä¸ç›¸åº”çš„setteræ–¹æ³•çš„å‚æ•°ç±»å‹ä¸€è‡´ã€‚
 
 ```
 ObjectAnimator anim = ObjectAnimator.ofFloat(foo, "alpha", 0f, 1f);
@@ -158,22 +158,22 @@ anim.start();
 ```
 
 ##Animating view property
-View Animation£¨Tween Animation£©ÖĞµÄ¶¯»­ÊµÏÖ£¬ÊÇÍ¨¹ıĞŞ¸ÄÍ¨¹ıÆäParent ViewÊµÏÖµÄ£¬ÔÚView±»drawnÊ±Parents View¸Ä±äËüµÄ»æÖÆ²ÎÊı£¬drawºóÔÙ¸Ä±ä²ÎÊıinvalidate£¬ÕâÑùËäÈ»ViewµÄ´óĞ¡»òĞı×ª½Ç¶ÈµÈ¸Ä±äÁË£¬µ«ViewµÄÊµ¼ÊÊôĞÔÃ»±ä¡£ÔÚAndroid3.0£¨API 11£©ÖĞ¸øview¼ÓÈëÁËĞÂµÄÊôĞÔ£¬ÈÃ¶¯»­ÄÜ¹»ÕæÕı¸Ä±äview µÄÊôĞÔ¡£
+View Animationï¼ˆTween Animationï¼‰ä¸­çš„åŠ¨ç”»å®ç°ï¼Œæ˜¯é€šè¿‡ä¿®æ”¹é€šè¿‡å…¶Parent Viewå®ç°çš„ï¼Œåœ¨Viewè¢«drawnæ—¶Parents Viewæ”¹å˜å®ƒçš„ç»˜åˆ¶å‚æ•°ï¼Œdrawåå†æ”¹å˜å‚æ•°invalidateï¼Œè¿™æ ·è™½ç„¶Viewçš„å¤§å°æˆ–æ—‹è½¬è§’åº¦ç­‰æ”¹å˜äº†ï¼Œä½†Viewçš„å®é™…å±æ€§æ²¡å˜ã€‚åœ¨Android3.0ï¼ˆAPI 11ï¼‰ä¸­ç»™viewåŠ å…¥äº†æ–°çš„å±æ€§ï¼Œè®©åŠ¨ç”»èƒ½å¤ŸçœŸæ­£æ”¹å˜view çš„å±æ€§ã€‚
 
- - translationX and translationY:    ViewÏà¶ÔÓÚÔ­Ê¼Î»ÖÃµÄÆ«ÒÆÁ¿
- - rotation, rotationX, and rotationY:    Ğı×ª£¬rotationÓÃÓÚ2DĞı×ª½Ç¶È£¬3DÖĞÓÃµ½ºóÁ½¸ö
- - caleX,scaleY:    Ëõ·Å±È
- - pivotX and pivotY:     viewµÄ±ä»¯ÖĞĞÄµãÎ»ÖÃ£¬ÔÚrotationºÍscale±ä»¯ÖĞµÄÔ²ĞÄÎ»ÖÃ¡£Ä¬ÈÏÎª¶ÔÏóµÄÖĞĞÄµã
- - x and y£º    ViewµÄ×îÖÕ×ø±ê£¬ÊÇViewµÄleft£¬topÎ»ÖÃ¼ÓÉÏtranslationX£¬translationY
- - alpha:     Í¸Ã÷¶È
+ - translationX and translationY:    Viewç›¸å¯¹äºåŸå§‹ä½ç½®çš„åç§»é‡
+ - rotation, rotationX, and rotationY:    æ—‹è½¬ï¼Œrotationç”¨äº2Dæ—‹è½¬è§’åº¦ï¼Œ3Dä¸­ç”¨åˆ°åä¸¤ä¸ª
+ - caleX,scaleY:    ç¼©æ”¾æ¯”
+ - pivotX and pivotY:     viewçš„å˜åŒ–ä¸­å¿ƒç‚¹ä½ç½®ï¼Œåœ¨rotationå’Œscaleå˜åŒ–ä¸­çš„åœ†å¿ƒä½ç½®ã€‚é»˜è®¤ä¸ºå¯¹è±¡çš„ä¸­å¿ƒç‚¹
+ - x and yï¼š    Viewçš„æœ€ç»ˆåæ ‡ï¼Œæ˜¯Viewçš„leftï¼Œtopä½ç½®åŠ ä¸ŠtranslationXï¼ŒtranslationY
+ - alpha:     é€æ˜åº¦
 
 ##TypeEvalutors
-¸ù¾İÊôĞÔµÄ¿ªÊ¼¡¢½áÊøÖµÓëTimeInterpolation¼ÆËã³öµÄÒò×Ó¼ÆËã³öµ±Ç°Ê±¼äµÄÊôĞÔÖµ£¬androidÌá¹©ÁËÒÔÏÂ¼¸¸öevalutor£º
+æ ¹æ®å±æ€§çš„å¼€å§‹ã€ç»“æŸå€¼ä¸TimeInterpolationè®¡ç®—å‡ºçš„å› å­è®¡ç®—å‡ºå½“å‰æ—¶é—´çš„å±æ€§å€¼ï¼Œandroidæä¾›äº†ä»¥ä¸‹å‡ ä¸ªevalutorï¼š
 
- - IntEvaluator£ºÊôĞÔµÄÖµÀàĞÍÎªint£»
- - FloatEvaluator£ºÊôĞÔµÄÖµÀàĞÍÎªfloat£»
- - ArgbEvaluator£ºÊôĞÔµÄÖµÀàĞÍÎªÊ®Áù½øÖÆÑÕÉ«Öµ£»
- - TypeEvaluator£ºÒ»¸ö½Ó¿Ú£¬¿ÉÒÔÍ¨¹ıÊµÏÖ¸Ã½Ó¿Ú×Ô¶¨ÒåEvaluator
+ - IntEvaluatorï¼šå±æ€§çš„å€¼ç±»å‹ä¸ºintï¼›
+ - FloatEvaluatorï¼šå±æ€§çš„å€¼ç±»å‹ä¸ºfloatï¼›
+ - ArgbEvaluatorï¼šå±æ€§çš„å€¼ç±»å‹ä¸ºåå…­è¿›åˆ¶é¢œè‰²å€¼ï¼›
+ - TypeEvaluatorï¼šä¸€ä¸ªæ¥å£ï¼Œå¯ä»¥é€šè¿‡å®ç°è¯¥æ¥å£è‡ªå®šä¹‰Evaluator
 
 ```
 public class FloatEvaluator implements TypeEvaluator {
@@ -184,7 +184,7 @@ public class FloatEvaluator implements TypeEvaluator {
     }
 }
 ```
-¸ù¾İ¶¯»­Ö´ĞĞµÄÊ±¼ä¸úÓ¦ÓÃµÄInterplator£¬»á¼ÆËã³öÒ»¸ö0~1Ö®¼äµÄÒò×Ó£¬¼´evaluteº¯ÊıÖĞµÄfraction²ÎÊı,È»ºó¸ù¾İevaluteÖµ¼ÆËã³öµ±Ç°µÄ·µ»ØÖµ¡£
+æ ¹æ®åŠ¨ç”»æ‰§è¡Œçš„æ—¶é—´è·Ÿåº”ç”¨çš„Interplatorï¼Œä¼šè®¡ç®—å‡ºä¸€ä¸ª0~1ä¹‹é—´çš„å› å­ï¼Œå³evaluteå‡½æ•°ä¸­çš„fractionå‚æ•°,ç„¶åæ ¹æ®evaluteå€¼è®¡ç®—å‡ºå½“å‰çš„è¿”å›å€¼ã€‚
 
 ```
 ValueAnimator animation = ValueAnimator.ofObject(new MyTypeEvaluator(), startPropertyValue, endPropertyValue);
@@ -193,28 +193,28 @@ animation.start();
 ```
 
 ##Using Interpolators
-Interpolators¶¨ÒåÁË¶¯»­¹ı³ÌÖĞÖµµÄ±ä»¯·½Ê½£¬ÈçÏßĞÔ¾ùÔÈ¸Ä±ä£¬¼ÓËÙ±ä¿ìµÈ¡£
-ÔÚView AnimationÖĞÊÇInterpolate£¬Property AnimationÖØÊÓTimeInterpolate¡£ÕâÁ½ÕßÊÇÒ»ÑùµÄ£¬3.0Ö®Ç°Ö»ÓĞInterpolate£¬3.0Ö®ºóÊµÏÖ´úÂë×ªÒÆÖÁTimeInterpolate£¬Interpolate¼Ì³Ğ×ÔTimeInterpolate£¬ÄÚ²¿Ã»ÓĞÈÎºÎ´úÂë¡£
+Interpolatorså®šä¹‰äº†åŠ¨ç”»è¿‡ç¨‹ä¸­å€¼çš„å˜åŒ–æ–¹å¼ï¼Œå¦‚çº¿æ€§å‡åŒ€æ”¹å˜ï¼ŒåŠ é€Ÿå˜å¿«ç­‰ã€‚
+åœ¨View Animationä¸­æ˜¯Interpolateï¼ŒProperty Animationé‡è§†TimeInterpolateã€‚è¿™ä¸¤è€…æ˜¯ä¸€æ ·çš„ï¼Œ3.0ä¹‹å‰åªæœ‰Interpolateï¼Œ3.0ä¹‹åå®ç°ä»£ç è½¬ç§»è‡³TimeInterpolateï¼ŒInterpolateç»§æ‰¿è‡ªTimeInterpolateï¼Œå†…éƒ¨æ²¡æœ‰ä»»ä½•ä»£ç ã€‚
 
- - AccelerateInterpolator¡¡¡¡¡¡¡¡¡¡     ¼ÓËÙ£¬¿ªÊ¼Ê±ÂıÖĞ¼ä¼ÓËÙ
- - DecelerateInterpolator¡¡¡¡¡¡ ¡¡¡¡   ¼õËÙ£¬¿ªÊ¼Ê±¿ìÈ»ºó¼õËÙ
- - AccelerateDecelerateInterolator¡¡   ÏÈ¼ÓËÙºó¼õËÙ£¬¿ªÊ¼½áÊøÊ±Âı£¬ÖĞ¼ä¼ÓËÙ
- - AnticipateInterpolator¡¡¡¡¡¡¡¡¡¡¡¡  ·´Ïò £¬ÏÈÏòÏà·´·½Ïò¸Ä±äÒ»¶ÎÔÙ¼ÓËÙ²¥·Å
- - AnticipateOvershootInterpolator¡¡   ·´Ïò¼Ó»Øµ¯£¬ÏÈÏòÏà·´·½Ïò¸Ä±ä£¬ÔÙ¼ÓËÙ²¥·Å£¬»á³¬³öÄ¿µÄÖµÈ»ºó»ºÂıÒÆ¶¯ÖÁÄ¿µÄÖµ
- - BounceInterpolator¡¡¡¡¡¡¡¡¡¡¡¡¡¡  ÌøÔ¾£¬¿ìµ½Ä¿µÄÖµÊ±Öµ»áÌøÔ¾£¬ÈçÄ¿µÄÖµ100£¬ºóÃæµÄÖµ¿ÉÄÜÒÀ´ÎÎª85£¬77£¬70£¬80£¬90£¬100
- - CycleIinterpolator¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ Ñ­»·£¬¶¯»­Ñ­»·Ò»¶¨´ÎÊı£¬ÖµµÄ¸Ä±äÎªÒ»ÕıÏÒº¯Êı£ºMath.sin(2 * mCycles * Math.PI * input)
- - LinearInterpolator¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ ÏßĞÔ£¬ÏßĞÔ¾ùÔÈ¸Ä±ä
- - OvershottInterpolator¡¡¡¡¡¡¡¡¡¡¡¡  »Øµ¯£¬×îºó³¬³öÄ¿µÄÖµÈ»ºó»ºÂı¸Ä±äµ½Ä¿µÄÖµ
- - TimeInterpolator¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡   Ò»¸ö½Ó¿Ú£¬ÔÊĞíÄã×Ô¶¨Òåinterpolator£¬ÒÔÉÏ¼¸¸ö¶¼ÊÇÊµÏÖÁËÕâ¸ö½Ó¿Ú
+ - AccelerateInterpolatorã€€ã€€ã€€ã€€ã€€     åŠ é€Ÿï¼Œå¼€å§‹æ—¶æ…¢ä¸­é—´åŠ é€Ÿ
+ - DecelerateInterpolatorã€€ã€€ã€€ ã€€ã€€   å‡é€Ÿï¼Œå¼€å§‹æ—¶å¿«ç„¶åå‡é€Ÿ
+ - AccelerateDecelerateInterolatorã€€   å…ˆåŠ é€Ÿåå‡é€Ÿï¼Œå¼€å§‹ç»“æŸæ—¶æ…¢ï¼Œä¸­é—´åŠ é€Ÿ
+ - AnticipateInterpolatorã€€ã€€ã€€ã€€ã€€ã€€  åå‘ ï¼Œå…ˆå‘ç›¸åæ–¹å‘æ”¹å˜ä¸€æ®µå†åŠ é€Ÿæ’­æ”¾
+ - AnticipateOvershootInterpolatorã€€   åå‘åŠ å›å¼¹ï¼Œå…ˆå‘ç›¸åæ–¹å‘æ”¹å˜ï¼Œå†åŠ é€Ÿæ’­æ”¾ï¼Œä¼šè¶…å‡ºç›®çš„å€¼ç„¶åç¼“æ…¢ç§»åŠ¨è‡³ç›®çš„å€¼
+ - BounceInterpolatorã€€ã€€ã€€ã€€ã€€ã€€ã€€  è·³è·ƒï¼Œå¿«åˆ°ç›®çš„å€¼æ—¶å€¼ä¼šè·³è·ƒï¼Œå¦‚ç›®çš„å€¼100ï¼Œåé¢çš„å€¼å¯èƒ½ä¾æ¬¡ä¸º85ï¼Œ77ï¼Œ70ï¼Œ80ï¼Œ90ï¼Œ100
+ - CycleIinterpolatorã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ å¾ªç¯ï¼ŒåŠ¨ç”»å¾ªç¯ä¸€å®šæ¬¡æ•°ï¼Œå€¼çš„æ”¹å˜ä¸ºä¸€æ­£å¼¦å‡½æ•°ï¼šMath.sin(2 * mCycles * Math.PI * input)
+ - LinearInterpolatorã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ çº¿æ€§ï¼Œçº¿æ€§å‡åŒ€æ”¹å˜
+ - OvershottInterpolatorã€€ã€€ã€€ã€€ã€€ã€€  å›å¼¹ï¼Œæœ€åè¶…å‡ºç›®çš„å€¼ç„¶åç¼“æ…¢æ”¹å˜åˆ°ç›®çš„å€¼
+ - TimeInterpolatorã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€   ä¸€ä¸ªæ¥å£ï¼Œå…è®¸ä½ è‡ªå®šä¹‰interpolatorï¼Œä»¥ä¸Šå‡ ä¸ªéƒ½æ˜¯å®ç°äº†è¿™ä¸ªæ¥å£
 
 ##Animating Layout Changes to ViewGroups
-ÔÚViewGroupÖĞµÄ×ÓÊÓÍ¼¿É¼ûĞÔ»òÕßÎ»ÖÃÓĞ±ä»¯µÄÊ±ºò£¬¿ÉÒÔÍ¨¹ıLayoutTransitionÀà¶ÔÆä¼ÓÈë¶¯»­Ğ§¹û¡£
-ÓĞËÄÖÖĞÎÊ½µÄÈİÆ÷¶¯»­£º
+åœ¨ViewGroupä¸­çš„å­è§†å›¾å¯è§æ€§æˆ–è€…ä½ç½®æœ‰å˜åŒ–çš„æ—¶å€™ï¼Œå¯ä»¥é€šè¿‡LayoutTransitionç±»å¯¹å…¶åŠ å…¥åŠ¨ç”»æ•ˆæœã€‚
+æœ‰å››ç§å½¢å¼çš„å®¹å™¨åŠ¨ç”»ï¼š
 
- - APPEARING: ¶¯»­ËùÔËĞĞµÄÏîÄ¿³öÏÖÔÚÕâ¸öÈİÆ÷ÖĞÊ±£¬¼´£ºviewÏÔÊ¾Ê±µÄ¶¯»­
- - CHANGE_APPEARING: ÓÉÓÚÔÚÕâ¸öÈİÆ÷×ÜĞÂÔö¼ÓÁËÒ»¸öview£¬¶øµ¼ÖÂÔ­À´µÄviewÎ»ÖÃ·¢Éú¸Ä±äËùÒÔ»á´¥·¢Õâ¸ö¶¯»­¡£
- - DISAPPEARING: viewÔÚÕâ¸öÈİÆ÷ÖĞÏûÊ§Ê±´¥·¢µÄ¶¯»­
- - CHANGE_DISAPPEARING: ÓÉÓÚÔÚÕâ¸öÈİÆ÷ÖĞÒÆ³ıÁËÒ»¸öview£¬¶øµ¼ÖÂÔ­À´µÄviewÎ»ÖÃ·¢Éú¸Ä±äËùÒÔ»á´¥·¢Õâ¸ö¶¯»­¡£
+ - APPEARING: åŠ¨ç”»æ‰€è¿è¡Œçš„é¡¹ç›®å‡ºç°åœ¨è¿™ä¸ªå®¹å™¨ä¸­æ—¶ï¼Œå³ï¼šviewæ˜¾ç¤ºæ—¶çš„åŠ¨ç”»
+ - CHANGE_APPEARING: ç”±äºåœ¨è¿™ä¸ªå®¹å™¨æ€»æ–°å¢åŠ äº†ä¸€ä¸ªviewï¼Œè€Œå¯¼è‡´åŸæ¥çš„viewä½ç½®å‘ç”Ÿæ”¹å˜æ‰€ä»¥ä¼šè§¦å‘è¿™ä¸ªåŠ¨ç”»ã€‚
+ - DISAPPEARING: viewåœ¨è¿™ä¸ªå®¹å™¨ä¸­æ¶ˆå¤±æ—¶è§¦å‘çš„åŠ¨ç”»
+ - CHANGE_DISAPPEARING: ç”±äºåœ¨è¿™ä¸ªå®¹å™¨ä¸­ç§»é™¤äº†ä¸€ä¸ªviewï¼Œè€Œå¯¼è‡´åŸæ¥çš„viewä½ç½®å‘ç”Ÿæ”¹å˜æ‰€ä»¥ä¼šè§¦å‘è¿™ä¸ªåŠ¨ç”»ã€‚
 
 ```
 mTransitioner = new LayoutTransition(); 
@@ -225,7 +225,7 @@ mLinearlayout.setLayoutTransition(mTransitioner);
 ```
 
 ##AnimatorSet
-AnimationSetÌá¹©ÁËÒ»¸ö°Ñ¶à¸ö¶¯»­×éºÏ³ÉÒ»¸ö×éºÏµÄ»úÖÆ£¬²¢¿ÉÉèÖÃ×éÖĞ¶¯»­µÄÊ±Ğò¹ØÏµ£¬ÈçÍ¬Ê±²¥·Å£¬Ë³Ğò²¥·ÅµÈ¡£
+AnimationSetæä¾›äº†ä¸€ä¸ªæŠŠå¤šä¸ªåŠ¨ç”»ç»„åˆæˆä¸€ä¸ªç»„åˆçš„æœºåˆ¶ï¼Œå¹¶å¯è®¾ç½®ç»„ä¸­åŠ¨ç”»çš„æ—¶åºå…³ç³»ï¼Œå¦‚åŒæ—¶æ’­æ”¾ï¼Œé¡ºåºæ’­æ”¾ç­‰ã€‚
 
 ```
 AnimatorSet bouncer = new AnimatorSet();
@@ -243,9 +243,9 @@ animatorSet.start();
 
 
 ##KeyFrame
-KeyframeÊÇÒ»¸öÊ±¼ä/Öµ¶Ô£¬ÓÃÓÚ¶¨ÒåÔÚÄ³¸öÊ±¿Ì¶¯»­µÄ×´Ì¬¡£±ÈÈçKeyframe.ofInt(.5f, Color.RED)¶¨ÒåÁËµ±¶¯»­½øĞĞÁË50%µÄÊ±ºò£¬ÑÕÉ«µÄÖµÓ¦¸ÃÊÇColor.RED¡£
+Keyframeæ˜¯ä¸€ä¸ªæ—¶é—´/å€¼å¯¹ï¼Œç”¨äºå®šä¹‰åœ¨æŸä¸ªæ—¶åˆ»åŠ¨ç”»çš„çŠ¶æ€ã€‚æ¯”å¦‚Keyframe.ofInt(.5f, Color.RED)å®šä¹‰äº†å½“åŠ¨ç”»è¿›è¡Œäº†50%çš„æ—¶å€™ï¼Œé¢œè‰²çš„å€¼åº”è¯¥æ˜¯Color.REDã€‚
 
-PropertyValuesHolder±£´æÁËviewµÄÊôĞÔµÄĞÅÏ¢ÒÔ¼°ÔÚ¶¯»­½øĞĞ¹ı³ÌÖĞ¸ÃÊôĞÔµÄÖµ¡£Í¨¹ı PropertyValuesHolder.ofKeyframe·½·¨À´¹¹½¨PropertyValuesHolderµÄÊµÀı£¬¸Ä·½·¨½ÓÊÕÒ»¸öÊôĞÔÃûÒÔ¼° ¶à¸öKeyframe¶ÔÏó×÷Îª²ÎÊı¡£µ±ÄãÏëÍ¨¹ı¶¯»­¸Ä±ä¶à¸öÊôĞÔµÄÊ±ºòPropertyValuesHolder¾Í·Ç³£ÓĞÓÃ¡£
+PropertyValuesHolderä¿å­˜äº†viewçš„å±æ€§çš„ä¿¡æ¯ä»¥åŠåœ¨åŠ¨ç”»è¿›è¡Œè¿‡ç¨‹ä¸­è¯¥å±æ€§çš„å€¼ã€‚é€šè¿‡ PropertyValuesHolder.ofKeyframeæ–¹æ³•æ¥æ„å»ºPropertyValuesHolderçš„å®ä¾‹ï¼Œæ”¹æ–¹æ³•æ¥æ”¶ä¸€ä¸ªå±æ€§åä»¥åŠ å¤šä¸ªKeyframeå¯¹è±¡ä½œä¸ºå‚æ•°ã€‚å½“ä½ æƒ³é€šè¿‡åŠ¨ç”»æ”¹å˜å¤šä¸ªå±æ€§çš„æ—¶å€™PropertyValuesHolderå°±éå¸¸æœ‰ç”¨ã€‚
 
 ```
 Keyframe kf0 = Keyframe.ofFloat(0f, 0f);
@@ -257,9 +257,9 @@ rotationAnim.setDuration(5000);
 ```
 
 ##ViewPropertyAnimator
-Èç¹ûĞèÒª¶ÔÒ»¸öViewµÄ¶à¸öÊôĞÔ½øĞĞ¶¯»­¿ÉÒÔÓÃViewPropertyAnimatorÀà£¬¸ÃÀà¶Ô¶àÊôĞÔ¶¯»­½øĞĞÁËÓÅ»¯£¬»áºÏ²¢Ò»Ğ©invalidate()À´¼õÉÙË¢ĞÂÊÓÍ¼£¬¸ÃÀàÔÚ3.1ÖĞÒıÈë¡£
+å¦‚æœéœ€è¦å¯¹ä¸€ä¸ªViewçš„å¤šä¸ªå±æ€§è¿›è¡ŒåŠ¨ç”»å¯ä»¥ç”¨ViewPropertyAnimatorç±»ï¼Œè¯¥ç±»å¯¹å¤šå±æ€§åŠ¨ç”»è¿›è¡Œäº†ä¼˜åŒ–ï¼Œä¼šåˆå¹¶ä¸€äº›invalidate()æ¥å‡å°‘åˆ·æ–°è§†å›¾ï¼Œè¯¥ç±»åœ¨3.1ä¸­å¼•å…¥ã€‚
 
-ÒÔÏÂÈı¶Î´úÂëÓÃÈıÖÖĞÎÊ½ÊµÏÖÍ¬Ò»¶¯»­Ğ§¹û£º
+ä»¥ä¸‹ä¸‰æ®µä»£ç ç”¨ä¸‰ç§å½¢å¼å®ç°åŒä¸€åŠ¨ç”»æ•ˆæœï¼š
 
 Multiple ObjectAnimator objects
 

@@ -1,15 +1,15 @@
-#Internal Storage �ڲ��洢�ռ�
-�ڲ��洢�ռ�Ҳ����userdata������/data/data/`application package`/��,����ļ����µ�����ֻ������Ӧ�÷��ʣ���ȫ�Ըߡ���Ӧ�ñ�ж�ص�ʱ�����ݻ�ͬʱ��ɾ����
+#Internal Storage 内部存储空间
+内部存储空间也就是userdata分区（/data/data/`application package`/）,这个文件夹下的内容只允许改应用访问，安全性高。在应用被卸载的时候，数据会同时被删除。
 
-##context.getFileDir����
+##context.getFileDir（）
 /data/data/`application package`/files
-openFileOutput()�����������ļ�Ҳ������ļ����¡�
+openFileOutput()函数创建的文件也在这个文件夹下。
 ##context.getCacheDir()
-/data/data/`application package`/cache  ����
+/data/data/`application package`/cache  缓存
 
 
-#External Storage  �ⲿ�洢�ռ�
-�ⲿ�洢�ռ䣬��sd��������/mnt/sdcard/�������Ա�����Ӧ�÷��ʣ�һ��ռ�Ƚϴ�
+#External Storage  外部存储空间
+外部存储空间，即sd卡分区（/mnt/sdcard/），可以被任意应用访问，一般空间比较大。
 ##context.getExternalFilesDir(String type)    
  /mnt/sdcard/Android/data/`application package`/files/ 
 
@@ -18,17 +18,17 @@ openFileOutput()�����������ļ�Ҳ������ļ����¡�
 
 ##Environment.getExternalStoragePublicDirectory(String type)
 
-typeֵ��
- - DIRECTORY_ALARMS                ��Ϊ���ӵ�����
- - DIRECTORY_DCIM                     ������������Ƭ
- - DIRECTORY_DOCUMENTS       �ĵ�
- - DIRECTORY_DOWNLOADS     �������ص�����
- -  DIRECTORY_MOVIES              ���еĵ�Ӱ
- - DIRECTORY_MUSIC                ����
- - DIRECTORY_NOTIFICATIONS   ֪ͨ����
- - DIRECTORY_PICTURES              ���е�ͼƬ����������Щ��������������Ƭ��
- - DIRECTORY_PODCASTS          ��/��Ƶ�ļ���Ƭ��
- - DIRECTORY_RINGTONES        ����
+type值：
+ - DIRECTORY_ALARMS                作为闹钟的声音
+ - DIRECTORY_DCIM                     照相机拍摄的照片
+ - DIRECTORY_DOCUMENTS       文档
+ - DIRECTORY_DOWNLOADS     其他下载的内容
+ -  DIRECTORY_MOVIES              所有的电影
+ - DIRECTORY_MUSIC                音乐
+ - DIRECTORY_NOTIFICATIONS   通知声音
+ - DIRECTORY_PICTURES              所有的图片（不包括那些用照相机拍摄的照片）
+ - DIRECTORY_PODCASTS          音/视频的剪辑片段
+ - DIRECTORY_RINGTONES        铃声
 
 
 ```java

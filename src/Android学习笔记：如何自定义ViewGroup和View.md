@@ -1,26 +1,26 @@
-#¸ÅÊö
-×Ô¶¨ÒåViewGroupºÍViewµÄĞĞÎª£¬Ö÷ÒªÊÇÍ¨¹ı¼Ì³ĞĞŞ¸Ä»ùÀàµÄonMeasure(),onLayout(),onDraw()Èı¸öº¯Êı¡£Èı¸öº¯Êı¹¦ÄÜ·Ö±ğ£º
+#æ¦‚è¿°
+è‡ªå®šä¹‰ViewGroupå’ŒViewçš„è¡Œä¸ºï¼Œä¸»è¦æ˜¯é€šè¿‡ç»§æ‰¿ä¿®æ”¹åŸºç±»çš„onMeasure(),onLayout(),onDraw()ä¸‰ä¸ªå‡½æ•°ã€‚ä¸‰ä¸ªå‡½æ•°åŠŸèƒ½åˆ†åˆ«ï¼š
 onMeasure():
 
- - ¼ÆËãµ±Ç°ÊÓÍ¼µÄ´óĞ¡£¬ÔÚlayout¹ı³ÌÖĞ»áÊ¹ÓÃ
- - µ÷ÓÃ×ÓÊÓÍ¬µÄº¯Êı¼ÆËãÆ÷´óĞ¡
+ - è®¡ç®—å½“å‰è§†å›¾çš„å¤§å°ï¼Œåœ¨layoutè¿‡ç¨‹ä¸­ä¼šä½¿ç”¨
+ - è°ƒç”¨å­è§†åŒçš„å‡½æ•°è®¡ç®—å™¨å¤§å°
 
 onLayout():
 
- - ²¼¾Öµ±Ç°ÊÓÍ¼µÄ×ÓÊÓÍ¼µÄ²¼¾Ö
+ - å¸ƒå±€å½“å‰è§†å›¾çš„å­è§†å›¾çš„å¸ƒå±€
 
 onDraw():
 
- - »æÖÆµ±Ç°ÊÓÍ¼µÄÊµÏÖ¡£
+ - ç»˜åˆ¶å½“å‰è§†å›¾çš„å®ç°ã€‚
 
-Í¨¹ıÈı¸öº¯ÊıµÄ¹¦ÄÜ¿ÉÒÔ¿´³öÔÚÊµÏÖ×Ô¼ºµÄViewGroupÍ¨³£ÊµÏÖonMeasure()ºÍonLayout()º¯Êı£¬µ±×Ô¶¨ÒåViewµÄÊ±ºòÍ¨³£ÊµÏÖonMeasure()ºÍonDraw()º¯Êı¡£
+é€šè¿‡ä¸‰ä¸ªå‡½æ•°çš„åŠŸèƒ½å¯ä»¥çœ‹å‡ºåœ¨å®ç°è‡ªå·±çš„ViewGroupé€šå¸¸å®ç°onMeasure()å’ŒonLayout()å‡½æ•°ï¼Œå½“è‡ªå®šä¹‰Viewçš„æ—¶å€™é€šå¸¸å®ç°onMeasure()å’ŒonDraw()å‡½æ•°ã€‚
 
-ÏÂÃæ·Ö±ğ½éÉÜÏÂ×Ô¶¨ÒåViewGroupºÍView
+ä¸‹é¢åˆ†åˆ«ä»‹ç»ä¸‹è‡ªå®šä¹‰ViewGroupå’ŒView
 
-#×Ô¶¨ÒåViewGroup
-ÎÒÃÇ×Ô¶¨ÒåÒ»¸öViewGroupµÄÄ¿µÄÍ¨³£ÊÇÎªÁËÈÃËüµÄchildView°´ÕÕÎÒÃÇµÄĞèÇó°Ú·Å¡£ÎªÁË´ïµ½Õâ¸öÄ¿µÄÎÒÃÇÒª×Ô¼ºÊµÏÖonMeasure()º¯ÊıºÍonLayout()º¯Êı¡£
-###onMeasure ¼ÆËãviewµÄ´óĞ¡
-ÔÚView.javaÖĞonMeasureº¯ÊıÄ¬ÈÏÊµÏÖÈçÏÂ£º
+#è‡ªå®šä¹‰ViewGroup
+æˆ‘ä»¬è‡ªå®šä¹‰ä¸€ä¸ªViewGroupçš„ç›®çš„é€šå¸¸æ˜¯ä¸ºäº†è®©å®ƒçš„childViewæŒ‰ç…§æˆ‘ä»¬çš„éœ€æ±‚æ‘†æ”¾ã€‚ä¸ºäº†è¾¾åˆ°è¿™ä¸ªç›®çš„æˆ‘ä»¬è¦è‡ªå·±å®ç°onMeasure()å‡½æ•°å’ŒonLayout()å‡½æ•°ã€‚
+###onMeasure è®¡ç®—viewçš„å¤§å°
+åœ¨View.javaä¸­onMeasureå‡½æ•°é»˜è®¤å®ç°å¦‚ä¸‹ï¼š
 
 ``` java
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -28,13 +28,13 @@ onDraw():
                 getDefaultSize(getSuggestedMinimumHeight(), heightMeasureSpec));
     }
 ```
-Í¨³£Ò»¸ö×Ô¶¨ÒåµÄViewGroupÊµÏÖ£º
+é€šå¸¸ä¸€ä¸ªè‡ªå®šä¹‰çš„ViewGroupå®ç°ï¼š
 
 ```
-//Ä³¸öViewGroupÀàĞÍµÄÊÓÍ¼  
+//æŸä¸ªViewGroupç±»å‹çš„è§†å›¾  
 protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {  
 
-  // »ñµÃËüµÄ¸¸ÈİÆ÷ÎªËüÉèÖÃµÄ²âÁ¿Ä£Ê½ºÍ´óĞ¡  
+  // è·å¾—å®ƒçš„çˆ¶å®¹å™¨ä¸ºå®ƒè®¾ç½®çš„æµ‹é‡æ¨¡å¼å’Œå¤§å°  
   int sizeWidth = MeasureSpec.getSize(widthMeasureSpec);  
   nt sizeHeight = MeasureSpec.getSize(heightMeasureSpec);  
   int modeWidth = MeasureSpec.getMode(widthMeasureSpec);  
@@ -48,36 +48,36 @@ protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
   setMeasuredDimension(getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec), getDefaultSize(getSuggestedMinimumHeight(), heightMeasureSpec));  
 }
 ```
-ÔÚonMeasure()º¯ÊıÖĞ»á±éÀúchildview.measure()¼ÆËã×ÓviewµÄ´óĞ¡£¬È»ºóÍ¨¹ısetMeaureDimension()º¯ÊıÀ´ÉèÖÃµ±Ç°ÊÓÍ¼µÄ´óĞ¡£¨ÔÚlayout¹ı³ÌÖĞ»áÊ¹ÓÃµ½£©	¡£¸ºÔğÉèÖÃ×Ó¿Ø¼şµÄ²âÁ¿Ä£Ê½ºÍ´óĞ¡£¬ ¸ù¾İËùÓĞ×Ó¿Ø¼şÉèÖÃ×Ô¼ºµÄ¿íºÍ¸ß ¡£Ö»Òª²»ÊÇwrap_content£¬¸¸ÈİÆ÷¶¼ÄÜÕıÈ·µÄ¼ÆËãÆä³ß´ç¡£ËùÒÔÎÒÃÇ×Ô¼ºĞèÒª¼ÆËãÈç¹ûÉèÖÃÎªwrap_contentÊ±µÄ¿íºÍ¸ß£¬ÈçºÎ¼ÆËãÄØ£¿ÄÇ¾ÍÊÇÍ¨¹ıÆächildViewµÄ¿íºÍ¸ßÀ´½øĞĞ¼ÆËã¡£
+åœ¨onMeasure()å‡½æ•°ä¸­ä¼šéå†childview.measure()è®¡ç®—å­viewçš„å¤§å°ï¼Œç„¶åé€šè¿‡setMeaureDimension()å‡½æ•°æ¥è®¾ç½®å½“å‰è§†å›¾çš„å¤§å°ï¼ˆåœ¨layoutè¿‡ç¨‹ä¸­ä¼šä½¿ç”¨åˆ°ï¼‰  ã€‚è´Ÿè´£è®¾ç½®å­æ§ä»¶çš„æµ‹é‡æ¨¡å¼å’Œå¤§å°ï¼Œ æ ¹æ®æ‰€æœ‰å­æ§ä»¶è®¾ç½®è‡ªå·±çš„å®½å’Œé«˜ ã€‚åªè¦ä¸æ˜¯wrap_contentï¼Œçˆ¶å®¹å™¨éƒ½èƒ½æ­£ç¡®çš„è®¡ç®—å…¶å°ºå¯¸ã€‚æ‰€ä»¥æˆ‘ä»¬è‡ªå·±éœ€è¦è®¡ç®—å¦‚æœè®¾ç½®ä¸ºwrap_contentæ—¶çš„å®½å’Œé«˜ï¼Œå¦‚ä½•è®¡ç®—å‘¢ï¼Ÿé‚£å°±æ˜¯é€šè¿‡å…¶childViewçš„å®½å’Œé«˜æ¥è¿›è¡Œè®¡ç®—ã€‚
 
 
-###onLayout Ö¸¶¨childViewµÄÎ»ÖÃ
-ÔÚonLayout()º¯ÊıÖĞÍê³É¶ÔËùÓĞchildViewµÄÎ»ÖÃ¼°´óĞ¡µÄÖ¸¶¨¡£
+###onLayout æŒ‡å®šchildViewçš„ä½ç½®
+åœ¨onLayout()å‡½æ•°ä¸­å®Œæˆå¯¹æ‰€æœ‰childViewçš„ä½ç½®åŠå¤§å°çš„æŒ‡å®šã€‚
 
 ```
 protected void onLayout(boolean changed, int left, int top, int right, int bottom) {  
 
     final int count = getChildCount();
-    for(i = 0; i < count; i¡¡£«£«)¡¡£û
+    for(i = 0; i < count; iã€€ï¼‹ï¼‹)ã€€ï½›
            final View child  = getChildAt(i);
-    ¡¡¡¡¡¡¡¡final LayoutParams lp = (LayoutParams) child.getLayoutParams();
-    ¡¡¡¡¡¡¡¡final int width = child.getMeasureWidth();
-    ¡¡¡¡¡¡¡¡final int height = child.getMeasureHeight();
+    ã€€ã€€ã€€ã€€final LayoutParams lp = (LayoutParams) child.getLayoutParams();
+    ã€€ã€€ã€€ã€€final int width = child.getMeasureWidth();
+    ã€€ã€€ã€€ã€€final int height = child.getMeasureHeight();
 
-           //¼ÆËãchildµÄleft£¬topÎ»ÖÃ
+           //è®¡ç®—childçš„leftï¼Œtopä½ç½®
            ...
            child.layout(childLeft, childTop, childLeft + width, childTop + height)
-    £ı
+    ï½
 }
 ```
 
-ÔÚonLayoutº¯ÊıÖĞ»áÊ¹ÓÃchildViewµÄMeasureWidth£¬MeasureHeightÒÔ¼°ÔÚxmlÖĞÉè¶¨µÄLayoutParams²ÎÊı£¬¼ÆËã³öchildViewµÄÎ»ÖÃ¡£
-	
+åœ¨onLayoutå‡½æ•°ä¸­ä¼šä½¿ç”¨childViewçš„MeasureWidthï¼ŒMeasureHeightä»¥åŠåœ¨xmlä¸­è®¾å®šçš„LayoutParamså‚æ•°ï¼Œè®¡ç®—å‡ºchildViewçš„ä½ç½®ã€‚
+  
 
-###ViewGroupµÄLayoutParams
-ViewÍ¨¹ıLayoutParamsÀà¸æËßÆä¸¸ÊÓÍ¼ËüÏëÒªµØ´óĞ¡(¼´£¬³¤¶ÈºÍ¿í¶È)¡£
-Òò´Ë£¬Ã¿¸öView¶¼°üº¬Ò»¸öViewGroup.LayoutParamsÀà»òÕßÆäÅÉÉúÀà£¬ViewÀàÒÀÀµÓÚViewGroup.LayoutParams
-ViewGroup×ÓÀà¿ÉÒÔÊµÏÖ×Ô¶¨ÒåLayoutParams£¬×Ô¶¨ÒåLayoutParamsÌá¹©ÁË¸üºÃµØÀ©Õ¹ĞÔ¡£ 
+###ViewGroupçš„LayoutParams
+Viewé€šè¿‡LayoutParamsç±»å‘Šè¯‰å…¶çˆ¶è§†å›¾å®ƒæƒ³è¦åœ°å¤§å°(å³ï¼Œé•¿åº¦å’Œå®½åº¦)ã€‚
+å› æ­¤ï¼Œæ¯ä¸ªViewéƒ½åŒ…å«ä¸€ä¸ªViewGroup.LayoutParamsç±»æˆ–è€…å…¶æ´¾ç”Ÿç±»ï¼ŒViewç±»ä¾èµ–äºViewGroup.LayoutParams
+ViewGroupå­ç±»å¯ä»¥å®ç°è‡ªå®šä¹‰LayoutParamsï¼Œè‡ªå®šä¹‰LayoutParamsæä¾›äº†æ›´å¥½åœ°æ‰©å±•æ€§ã€‚ 
 
 ```
 public class CascadeLayout extends ViewGroup {
@@ -133,13 +133,13 @@ public class CascadeLayout extends ViewGroup {
 }
 ```
 
-Ö÷Òª¹¦ÄÜ¾ÍÊÇÔÚÌí¼Ó×ÓViewÊ±ÎªÆä¹¹½¨ÁËÒ»¸öLayoutParams¶ÔÏó¡£µ«¸üÖØÒªµÄÊÇ£¬ViewGroupµÄ×ÓÀà¿ÉÒÔÖØÔØÉÏÃæµÄ¼¸¸ö·½·¨£¬·µ»ØÌØ¶¨µÄLayoutParams¶ÔÏó£¬ÀıÈç£º¶ÔÓÚLinearLayout¶øÑÔ£¬ÔòÊÇLinearLayout.LayoutParams¶ÔÏó¡£ÕâÃ´×öµØÄ¿µÄÊÇ£¬ÄÜÔÚÆäËûĞèÒªËüµÄµØ·½£¬¿ÉÒÔ½«ÆäÇ¿ÖÆ×ª»»³ÉLinearLayout.LayoutParams¶ÔÏó¡£ checkLayoutParams(),generateDefaultLayoutParams(),generateLayoutParams(),()¼¸¸öº¯Êı±ØĞëÊµÏÖ²ÅÄÜÔÚÊ¹ÓÃµÄÊ±ºò½«ViewGroup.LayoutParamsÇ¿ÖÆ×ª»»³ÉCustomViewGroup.LayoutParams¡£
+ä¸»è¦åŠŸèƒ½å°±æ˜¯åœ¨æ·»åŠ å­Viewæ—¶ä¸ºå…¶æ„å»ºäº†ä¸€ä¸ªLayoutParamså¯¹è±¡ã€‚ä½†æ›´é‡è¦çš„æ˜¯ï¼ŒViewGroupçš„å­ç±»å¯ä»¥é‡è½½ä¸Šé¢çš„å‡ ä¸ªæ–¹æ³•ï¼Œè¿”å›ç‰¹å®šçš„LayoutParamså¯¹è±¡ï¼Œä¾‹å¦‚ï¼šå¯¹äºLinearLayoutè€Œè¨€ï¼Œåˆ™æ˜¯LinearLayout.LayoutParamså¯¹è±¡ã€‚è¿™ä¹ˆåšåœ°ç›®çš„æ˜¯ï¼Œèƒ½åœ¨å…¶ä»–éœ€è¦å®ƒçš„åœ°æ–¹ï¼Œå¯ä»¥å°†å…¶å¼ºåˆ¶è½¬æ¢æˆLinearLayout.LayoutParamså¯¹è±¡ã€‚ checkLayoutParams(),generateDefaultLayoutParams(),generateLayoutParams(),()å‡ ä¸ªå‡½æ•°å¿…é¡»å®ç°æ‰èƒ½åœ¨ä½¿ç”¨çš„æ—¶å€™å°†ViewGroup.LayoutParamså¼ºåˆ¶è½¬æ¢æˆCustomViewGroup.LayoutParamsã€‚
 
-#×Ô¶¨ÒåView
-ÓĞÊ±ºòÎªÁËÊµÏÖ¸´ÔÓµÄ¶¯»­ÎÒÃÇ»áÍ¨¹ı¼Ì³ĞViewµÄ·½Ê½À´×Ô¶¨ÒåÒ»¸öÊµÏÖ¡£×Ô¶¨Òå¹ı³ÌÖĞÎÒÃÇÍ¨¹ıonMeasure()º¯ÊıÀ´²âÁ¿ViewµÄ´óĞ¡£¬OnDraw()º¯ÊıÀ´ÊµÏÖ¾ßÌåµÄ»æÖÆ¹¤×÷¡£onMeasure()ºÍÉÏÃÅµÄ×Ô¶¨ÒåViewGroupÀàËÆ¡£
+#è‡ªå®šä¹‰View
+æœ‰æ—¶å€™ä¸ºäº†å®ç°å¤æ‚çš„åŠ¨ç”»æˆ‘ä»¬ä¼šé€šè¿‡ç»§æ‰¿Viewçš„æ–¹å¼æ¥è‡ªå®šä¹‰ä¸€ä¸ªå®ç°ã€‚è‡ªå®šä¹‰è¿‡ç¨‹ä¸­æˆ‘ä»¬é€šè¿‡onMeasure()å‡½æ•°æ¥æµ‹é‡Viewçš„å¤§å°ï¼ŒOnDraw()å‡½æ•°æ¥å®ç°å…·ä½“çš„ç»˜åˆ¶å·¥ä½œã€‚onMeasure()å’Œä¸Šé—¨çš„è‡ªå®šä¹‰ViewGroupç±»ä¼¼ã€‚
 
-###onDraw »æÖÆ
-Í¨¹ı¼Ì³ĞViewµÄonDraw()º¯ÊıÀ´ÊµÏÖ»æÖÆ¹¤×÷£¬ÏµÍ³¸øÎÒÃÇÌá¹©ÁËÒ»¸öCanvasÀà£¬Ò²¾ÍÊÇ»­²¼À´¾ßÌå²Ù×÷
+###onDraw ç»˜åˆ¶
+é€šè¿‡ç»§æ‰¿Viewçš„onDraw()å‡½æ•°æ¥å®ç°ç»˜åˆ¶å·¥ä½œï¼Œç³»ç»Ÿç»™æˆ‘ä»¬æä¾›äº†ä¸€ä¸ªCanvasç±»ï¼Œä¹Ÿå°±æ˜¯ç”»å¸ƒæ¥å…·ä½“æ“ä½œ
 
 ```java
 protected void onDraw(Canvas canvas)  
@@ -152,36 +152,36 @@ protected void onDraw(Canvas canvas)
     } 
 ```
 ####Canvas
-CanvasÖ÷ÒªÓÃÓÚ2D»æÍ¼£¬ÄÇÃ´ËüÒ²Ìá¹©ÁËºÜ¶àÏàÓ¦µÄdrawXxx()·½·¨£¬·½±ãÎÒÃÇÔÚCanvas¶ÔÏóÉÏ»­»­£¬drawXxx()¾ßÓĞ¶àÖÖÀàĞÍ£¬¿ÉÒÔ»­³ö£ºµã¡¢Ïß¡¢¾ØĞÎ¡¢Ô²ĞÎ¡¢ÍÖÔ²¡¢ÎÄ×Ö¡¢Î»Í¼µÈµÄÍ¼ĞÎ£¬ÕâÀï¾Í²»ÔÙÒ»Ò»½éÉÜÁË£¬Ö»½éÉÜ¼¸¸öCanvasÖĞ³£ÓÃµÄ·½·¨£º
+Canvasä¸»è¦ç”¨äº2Dç»˜å›¾ï¼Œé‚£ä¹ˆå®ƒä¹Ÿæä¾›äº†å¾ˆå¤šç›¸åº”çš„drawXxx()æ–¹æ³•ï¼Œæ–¹ä¾¿æˆ‘ä»¬åœ¨Canvaså¯¹è±¡ä¸Šç”»ç”»ï¼ŒdrawXxx()å…·æœ‰å¤šç§ç±»å‹ï¼Œå¯ä»¥ç”»å‡ºï¼šç‚¹ã€çº¿ã€çŸ©å½¢ã€åœ†å½¢ã€æ¤­åœ†ã€æ–‡å­—ã€ä½å›¾ç­‰çš„å›¾å½¢ï¼Œè¿™é‡Œå°±ä¸å†ä¸€ä¸€ä»‹ç»äº†ï¼Œåªä»‹ç»å‡ ä¸ªCanvasä¸­å¸¸ç”¨çš„æ–¹æ³•ï¼š
 
- - void drawBitmap(Bitmap bitmap,float left,float top,Paint paint)£ºÔÚÖ¸¶¨×ø±ê»æÖÆÎ»Í¼¡£
- - void drawLine(float startX,float startY,float stopX,float stopY,Paint paint)£º¸ù¾İ¸ø¶¨µÄÆğÊ¼µãºÍ½áÊøµãÖ®¼ä»æÖÆÁ¬Ïß¡£
- - void drawPath(Path path,Paint paint)£º¸ù¾İ¸ø¶¨µÄpath£¬»æÖÆÁ¬Ïß¡£
- - void drawPoint(float x,float y,Paint paint)£º¸ù¾İ¸ø¶¨µÄ×ø±ê£¬»æÖÆµã¡£
- - void drawText(String text,int start,int end,Paint paint)£º¸ù¾İ¸ø¶¨µÄ×ø±ê£¬»æÖÆÎÄ×Ö¡£
- - int getHeight()£ºµÃµ½CanvasµÄ¸ß¶È¡£
- - int getWidth()£ºµÃµ½CanvasµÄ¿í¶È¡£
+ - void drawBitmap(Bitmap bitmap,float left,float top,Paint paint)ï¼šåœ¨æŒ‡å®šåæ ‡ç»˜åˆ¶ä½å›¾ã€‚
+ - void drawLine(float startX,float startY,float stopX,float stopY,Paint paint)ï¼šæ ¹æ®ç»™å®šçš„èµ·å§‹ç‚¹å’Œç»“æŸç‚¹ä¹‹é—´ç»˜åˆ¶è¿çº¿ã€‚
+ - void drawPath(Path path,Paint paint)ï¼šæ ¹æ®ç»™å®šçš„pathï¼Œç»˜åˆ¶è¿çº¿ã€‚
+ - void drawPoint(float x,float y,Paint paint)ï¼šæ ¹æ®ç»™å®šçš„åæ ‡ï¼Œç»˜åˆ¶ç‚¹ã€‚
+ - void drawText(String text,int start,int end,Paint paint)ï¼šæ ¹æ®ç»™å®šçš„åæ ‡ï¼Œç»˜åˆ¶æ–‡å­—ã€‚
+ - int getHeight()ï¼šå¾—åˆ°Canvasçš„é«˜åº¦ã€‚
+ - int getWidth()ï¼šå¾—åˆ°Canvasçš„å®½åº¦ã€‚
 
 ####Paint
-´ÓÉÏÃæÁĞ¾ÙµÄ¼¸¸öCanvas.drawXxx()µÄ·½·¨¿´µ½£¬ÆäÖĞ¶¼ÓĞÒ»¸öÀàĞÍÎªpaintµÄ²ÎÊı£¬¿ÉÒÔ°ÑËüÀí½âÎªÒ»¸ö"»­±Ê"£¬Í¨¹ıÕâ¸ö»­±Ê£¬ÔÚCanvasÕâÕÅ»­²¼ÉÏ×÷»­¡£ ËüÎ»ÓÚ"android.graphics.Paint"°üÏÂ£¬Ö÷ÒªÓÃÓÚÉèÖÃ»æÍ¼·ç¸ñ£¬°üÀ¨»­±ÊÑÕÉ«¡¢»­±Ê´ÖÏ¸¡¢Ìî³ä·ç¸ñµÈ¡£
+ä»ä¸Šé¢åˆ—ä¸¾çš„å‡ ä¸ªCanvas.drawXxx()çš„æ–¹æ³•çœ‹åˆ°ï¼Œå…¶ä¸­éƒ½æœ‰ä¸€ä¸ªç±»å‹ä¸ºpaintçš„å‚æ•°ï¼Œå¯ä»¥æŠŠå®ƒç†è§£ä¸ºä¸€ä¸ª"ç”»ç¬”"ï¼Œé€šè¿‡è¿™ä¸ªç”»ç¬”ï¼Œåœ¨Canvasè¿™å¼ ç”»å¸ƒä¸Šä½œç”»ã€‚ å®ƒä½äº"android.graphics.Paint"åŒ…ä¸‹ï¼Œä¸»è¦ç”¨äºè®¾ç½®ç»˜å›¾é£æ ¼ï¼ŒåŒ…æ‹¬ç”»ç¬”é¢œè‰²ã€ç”»ç¬”ç²—ç»†ã€å¡«å……é£æ ¼ç­‰ã€‚
 
-PaintÖĞÌá¹©ÁË´óÁ¿ÉèÖÃ»æÍ¼·ç¸ñµÄ·½·¨£¬ÏÂÃæÁĞ³öÒ»Ğ©³£ÓÃµÄ£º
+Paintä¸­æä¾›äº†å¤§é‡è®¾ç½®ç»˜å›¾é£æ ¼çš„æ–¹æ³•ï¼Œä¸‹é¢åˆ—å‡ºä¸€äº›å¸¸ç”¨çš„ï¼š
 
- - setARGB(int a,int r,int g,int b)£ºÉèÖÃARGBÑÕÉ«¡£
- - setColor(int color)£ºÉèÖÃÑÕÉ«¡£
- - setAlpha(int a)£ºÉèÖÃÍ¸Ã÷¶È¡£
- - setPathEffect(PathEffect effect)£ºÉèÖÃ»æÖÆÂ·¾¶Ê±µÄÂ·¾¶Ğ§¹û¡£
- - setShader(Shader shader)£ºÉèÖÃPaintµÄÌî³äĞ§¹û¡£
- - setAntiAlias(boolean aa)£ºÉèÖÃÊÇ·ñ¿¹¾â³İ¡£
- - setStrokeWidth(float width)£ºÉèÖÃPaintµÄ±Ê´¥¿í¶È¡£
- - setStyle(Paint.Style style)£ºÉèÖÃPaintµÄÌî³ä·ç¸ñ¡£
- - setTextSize(float textSize)£ºÉèÖÃ»æÖÆÎÄ±¾Ê±µÄÎÄ×Ö´óĞ¡¡£
+ - setARGB(int a,int r,int g,int b)ï¼šè®¾ç½®ARGBé¢œè‰²ã€‚
+ - setColor(int color)ï¼šè®¾ç½®é¢œè‰²ã€‚
+ - setAlpha(int a)ï¼šè®¾ç½®é€æ˜åº¦ã€‚
+ - setPathEffect(PathEffect effect)ï¼šè®¾ç½®ç»˜åˆ¶è·¯å¾„æ—¶çš„è·¯å¾„æ•ˆæœã€‚
+ - setShader(Shader shader)ï¼šè®¾ç½®Paintçš„å¡«å……æ•ˆæœã€‚
+ - setAntiAlias(boolean aa)ï¼šè®¾ç½®æ˜¯å¦æŠ—é”¯é½¿ã€‚
+ - setStrokeWidth(float width)ï¼šè®¾ç½®Paintçš„ç¬”è§¦å®½åº¦ã€‚
+ - setStyle(Paint.Style style)ï¼šè®¾ç½®Paintçš„å¡«å……é£æ ¼ã€‚
+ - setTextSize(float textSize)ï¼šè®¾ç½®ç»˜åˆ¶æ–‡æœ¬æ—¶çš„æ–‡å­—å¤§å°ã€‚
 
 
-#×Ô¶¨Òå×ÊÔ´ÊôĞÔ
-AndroidµÄ×ÊÔ´¶¼ÊÇÍ¨¹ıxml¹ÜÀíµÄ£¬ÎªÁËÈÃÎÒÃÇ×Ô¶¨ÒåµÄÊÓÍ¼¸ü·½±ãµÄÔÚxmlÎÄ¼şÖĞÊ¹ÓÃ£¬ÎÒÃÇÒ²ĞèÒªÔÚ×ÊÔ´ÎÄ¼şÖĞ×Ô¶¨ÒåÒ»Ğ©ÊôĞÔ·½±ãÊ¹ÓÃ¡£
+#è‡ªå®šä¹‰èµ„æºå±æ€§
+Androidçš„èµ„æºéƒ½æ˜¯é€šè¿‡xmlç®¡ç†çš„ï¼Œä¸ºäº†è®©æˆ‘ä»¬è‡ªå®šä¹‰çš„è§†å›¾æ›´æ–¹ä¾¿çš„åœ¨xmlæ–‡ä»¶ä¸­ä½¿ç”¨ï¼Œæˆ‘ä»¬ä¹Ÿéœ€è¦åœ¨èµ„æºæ–‡ä»¶ä¸­è‡ªå®šä¹‰ä¸€äº›å±æ€§æ–¹ä¾¿ä½¿ç”¨ã€‚
 
-±àĞ´values/attrs.xml
+ç¼–å†™values/attrs.xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -195,7 +195,7 @@ AndroidµÄ×ÊÔ´¶¼ÊÇÍ¨¹ıxml¹ÜÀíµÄ£¬ÎªÁËÈÃÎÒÃÇ×Ô¶¨ÒåµÄÊÓÍ¼¸ü·½±ãµÄÔÚxmlÎÄ¼şÖĞÊ¹ÓÃ£¬Î
 </resources>
 ```
 
- ÎÒÃÇ»áÔÚÊ¹ÓÃCustomViewµÄÊ±ºòÊ¹ÓÃÕâĞ©ÊôĞÔ
+ æˆ‘ä»¬ä¼šåœ¨ä½¿ç”¨CustomViewçš„æ—¶å€™ä½¿ç”¨è¿™äº›å±æ€§
  
 
 ```
@@ -214,7 +214,7 @@ AndroidµÄ×ÊÔ´¶¼ÊÇÍ¨¹ıxml¹ÜÀíµÄ£¬ÎªÁËÈÃÎÒÃÇ×Ô¶¨ÒåµÄÊÓÍ¼¸ü·½±ãµÄÔÚxmlÎÄ¼şÖĞÊ¹ÓÃ£¬Î
 </RelativeLayout>
 ```
 
-È»ºóÔÙCustomViewµÄ¹¹Ôìº¯ÊıÖĞ°ÑÊôĞÔ½âÎö³öÀ´
+ç„¶åå†CustomViewçš„æ„é€ å‡½æ•°ä¸­æŠŠå±æ€§è§£æå‡ºæ¥
 
 ```
 public class MyTextView extends View {
@@ -238,4 +238,4 @@ public class MyTextView extends View {
 ```
 
 
-ÒÔÉÏÊÇ×Ô¼ºÑ§Ï°×Ô¶¨ÒåViewºÍViewGroup×Ü½áµÄ±Ê¼Ç¡£
+ä»¥ä¸Šæ˜¯è‡ªå·±å­¦ä¹ è‡ªå®šä¹‰Viewå’ŒViewGroupæ€»ç»“çš„ç¬”è®°ã€‚

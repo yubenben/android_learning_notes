@@ -1,44 +1,44 @@
-ÕâÒ»½Ú×Ü½áÒ»ÏÂ¹ØÓÚÍ¼ĞÎ´¦ÀíÏà¹ØµÄÖªÊ¶¡£AndroidÖĞ2DÍ¼ĞÎ´¦ÀíÒıÇæÖ÷ÒªÓĞÒÔÏÂ¼¸¸öÖØÒª²¿·Ö×é³É£º
+è¿™ä¸€èŠ‚æ€»ç»“ä¸€ä¸‹å…³äºå›¾å½¢å¤„ç†ç›¸å…³çš„çŸ¥è¯†ã€‚Androidä¸­2Då›¾å½¢å¤„ç†å¼•æ“ä¸»è¦æœ‰ä»¥ä¸‹å‡ ä¸ªé‡è¦éƒ¨åˆ†ç»„æˆï¼š
 
- - Canvas£ºhold the"draw"calls.     »­²¼£¬Ö´ĞĞ»­Í¼µÄ²Ù×÷º¯Êı£¨Êµ¼ÊCanvasÊÇ»­¼ÒµÄ½ÇÉ«£¬Bitmap²ÅÊÇÕæÕıµÄ»­²¼£©
- - Bitmap£ºhold the pixels.     ´æ·ÅÎ»Í¼Êı¾İ
- - Paint£ºdescribe the colors and styles for the drawing      »­±ÊµÄÑùÊ½£¨ÑÕÉ«£¬´ÖÏ¸£©
- - drawing primtive£º   »æÍ¼µÄÔ­Ê¼ÄÚÈİ
+ - Canvasï¼šhold the"draw"calls.     ç”»å¸ƒï¼Œæ‰§è¡Œç”»å›¾çš„æ“ä½œå‡½æ•°ï¼ˆå®é™…Canvasæ˜¯ç”»å®¶çš„è§’è‰²ï¼ŒBitmapæ‰æ˜¯çœŸæ­£çš„ç”»å¸ƒï¼‰
+ - Bitmapï¼šhold the pixels.     å­˜æ”¾ä½å›¾æ•°æ®
+ - Paintï¼šdescribe the colors and styles for the drawing      ç”»ç¬”çš„æ ·å¼ï¼ˆé¢œè‰²ï¼Œç²—ç»†ï¼‰
+ - drawing primtiveï¼š   ç»˜å›¾çš„åŸå§‹å†…å®¹
 
 #Canvas
-ÔÚÓ¦ÓÃÖĞµ±ĞèÒª»æÖÆÌØÊâµÄÍ¼Ïñ»òÕß¶¯»­Ê±£¬AndroidÏµÍ³Ìá¹©ÁËÒ»¸öCanvasÀà£¬Ëû°üº¬ºÜ¶àµÄdrawº¯Êı£¬¿ÉÒÔ°ÑÍ¼ÏóÖ±½Ó»æÖÆµ½Óë½çÃæ°ó¶¨µÄBitmapÖĞ¡£
-Canvas£¨»­²¼£©±ØĞëºÍBitmap°ó¶¨²Å¿ÉÒÔ½øĞĞ²Ù×÷£¬»­²¼ËùÓĞµÄ»æÖÆ²Ù×÷¶¼»á»æÖÆµ½°ó¶¨µÄbitmapÉÏÃæ¡£
-ÓĞÈıÖÖĞÎÊ½¿ÉÒÔ»ñµÃCanvasÀà
+åœ¨åº”ç”¨ä¸­å½“éœ€è¦ç»˜åˆ¶ç‰¹æ®Šçš„å›¾åƒæˆ–è€…åŠ¨ç”»æ—¶ï¼ŒAndroidç³»ç»Ÿæä¾›äº†ä¸€ä¸ªCanvasç±»ï¼Œä»–åŒ…å«å¾ˆå¤šçš„drawå‡½æ•°ï¼Œå¯ä»¥æŠŠå›¾è±¡ç›´æ¥ç»˜åˆ¶åˆ°ä¸ç•Œé¢ç»‘å®šçš„Bitmapä¸­ã€‚
+Canvasï¼ˆç”»å¸ƒï¼‰å¿…é¡»å’ŒBitmapç»‘å®šæ‰å¯ä»¥è¿›è¡Œæ“ä½œï¼Œç”»å¸ƒæ‰€æœ‰çš„ç»˜åˆ¶æ“ä½œéƒ½ä¼šç»˜åˆ¶åˆ°ç»‘å®šçš„bitmapä¸Šé¢ã€‚
+æœ‰ä¸‰ç§å½¢å¼å¯ä»¥è·å¾—Canvasç±»
 ##new Canvas
-ÎÒÃÇ¿ÉÒÔÖ±½Ó´´½¨Ò»¸öCanvas¶ÔÏó¡£Í¬Ê±ÎÒÃÇĞèÒª´´½¨Ò»¸öBitmap°ó¶¨µ½CanvasÀàÖĞ¡£
+æˆ‘ä»¬å¯ä»¥ç›´æ¥åˆ›å»ºä¸€ä¸ªCanvaså¯¹è±¡ã€‚åŒæ—¶æˆ‘ä»¬éœ€è¦åˆ›å»ºä¸€ä¸ªBitmapç»‘å®šåˆ°Canvasç±»ä¸­ã€‚
 
 ```java
 Bitmap b = Bitmap.createBitmap(100, 100, Bitmap.Config.ARGB_8888);
 Canvas c = new Canvas(b);
 ```
-Í¨¹ıCanvasÀà»æÖÆµÄÄÚÈİ»á±£´æµÄBitmapÀïÃæ£¬È»ºóÎÒÃÇ¿ÉÒÔÊ¹ÓÃCanvas.draw(Bitmap, ...)º¯Êı½«BitmapÖĞµÄÄÚÈİ»æÖÆµ½ÓëÏµÍ³½çÃæ°ó¶¨µÄCanvasÖĞ¡£
+é€šè¿‡Canvasç±»ç»˜åˆ¶çš„å†…å®¹ä¼šä¿å­˜çš„Bitmapé‡Œé¢ï¼Œç„¶åæˆ‘ä»¬å¯ä»¥ä½¿ç”¨Canvas.draw(Bitmap, ...)å‡½æ•°å°†Bitmapä¸­çš„å†…å®¹ç»˜åˆ¶åˆ°ä¸ç³»ç»Ÿç•Œé¢ç»‘å®šçš„Canvasä¸­ã€‚
 ##View.onDraw
-Í¨¹ı×Ô¶¨ÒåView£¬ÔÚonDraw£¨£©º¯ÊıÖĞÏµÍ³»áÌá¹©Ò»¸ö³õÊ¼»¯Íê³ÉµÄCanvas£¬ÎÒÃÇ¿ÉÒÔÖ±½Óµ÷ÓÃdrawº¯Êı»æÖÆ¡£
+é€šè¿‡è‡ªå®šä¹‰Viewï¼Œåœ¨onDrawï¼ˆï¼‰å‡½æ•°ä¸­ç³»ç»Ÿä¼šæä¾›ä¸€ä¸ªåˆå§‹åŒ–å®Œæˆçš„Canvasï¼Œæˆ‘ä»¬å¯ä»¥ç›´æ¥è°ƒç”¨drawå‡½æ•°ç»˜åˆ¶ã€‚
 
 ```java
 class CustomView1 extends View{   
                                                                                                                                   
         ...
                                                                                                                                       
-        //ÔÚÕâÀïÎÒÃÇ½«²âÊÔcanvasÌá¹©µÄ»æÖÆÍ¼ĞÎ·½·¨   
+        //åœ¨è¿™é‡Œæˆ‘ä»¬å°†æµ‹è¯•canvasæä¾›çš„ç»˜åˆ¶å›¾å½¢æ–¹æ³•   
         @Override   
         protected void onDraw(Canvas canvas) {   
           RectF rect = new RectF(0, 0, 100, 100);   
                                                                                                                                   
-          canvas.drawArc(rect, //»¡ÏßËùÊ¹ÓÃµÄ¾ØĞÎÇøÓò´óĞ¡   
-                  0,  //¿ªÊ¼½Ç¶È   
-                  90, //É¨¹ıµÄ½Ç¶È   
-                  false, //ÊÇ·ñÊ¹ÓÃÖĞĞÄ   
+          canvas.drawArc(rect, //å¼§çº¿æ‰€ä½¿ç”¨çš„çŸ©å½¢åŒºåŸŸå¤§å°   
+                  0,  //å¼€å§‹è§’åº¦   
+                  90, //æ‰«è¿‡çš„è§’åº¦   
+                  false, //æ˜¯å¦ä½¿ç”¨ä¸­å¿ƒ   
                   paint);                                                                                                                         
         }                                                                                                                         
     }   
 ```
-Ê¹ÓÃonDrawÌá¹©µÄCanvas²ÎÊı£¬ÎÒÃÇÖ±½Óµ÷ÓÃcanvas.draw()»òÕßÆäËûdrawº¯ÊıÊ±Ê¹ÓÃcanvas×÷Îª²ÎÊı¡£onDrawº¯ÊıÍê³Éºó£¬ÏµÍ³»á×Ô¶¯½«Canvas»æÖÆµÄÄÚÈİ¼ÓÔØµ½viewÉÏ¡£
+ä½¿ç”¨onDrawæä¾›çš„Canvaså‚æ•°ï¼Œæˆ‘ä»¬ç›´æ¥è°ƒç”¨canvas.draw()æˆ–è€…å…¶ä»–drawå‡½æ•°æ—¶ä½¿ç”¨canvasä½œä¸ºå‚æ•°ã€‚onDrawå‡½æ•°å®Œæˆåï¼Œç³»ç»Ÿä¼šè‡ªåŠ¨å°†Canvasç»˜åˆ¶çš„å†…å®¹åŠ è½½åˆ°viewä¸Šã€‚
 
 ##on a SurfaceView
 
@@ -83,18 +83,18 @@ implements SurfaceHolder.Callback{
 }
 ```
 
-##º¯Êı
+##å‡½æ•°
  
 ### save() resotre()
- save£ºÓÃÀ´±£´æCanvasµÄ×´Ì¬¡£saveÖ®ºó£¬¿ÉÒÔµ÷ÓÃCanvasµÄÆ½ÒÆ¡¢·ÅËõ¡¢Ğı×ª¡¢´íÇĞ¡¢²Ã¼ôµÈ²Ù×÷¡£
- restore£ºÓÃÀ´»Ö¸´CanvasÖ®Ç°±£´æµÄ×´Ì¬¡£·ÀÖ¹saveºó¶ÔCanvasÖ´ĞĞµÄ²Ù×÷¶ÔºóĞøµÄ»æÖÆÓĞÓ°Ïì¡£
+ saveï¼šç”¨æ¥ä¿å­˜Canvasçš„çŠ¶æ€ã€‚saveä¹‹åï¼Œå¯ä»¥è°ƒç”¨Canvasçš„å¹³ç§»ã€æ”¾ç¼©ã€æ—‹è½¬ã€é”™åˆ‡ã€è£å‰ªç­‰æ“ä½œã€‚
+ restoreï¼šç”¨æ¥æ¢å¤Canvasä¹‹å‰ä¿å­˜çš„çŠ¶æ€ã€‚é˜²æ­¢saveåå¯¹Canvasæ‰§è¡Œçš„æ“ä½œå¯¹åç»­çš„ç»˜åˆ¶æœ‰å½±å“ã€‚
  
- *saveºÍrestoreÒªÅä¶ÔÊ¹ÓÃ£¨restore¿ÉÒÔ±ÈsaveÉÙ£¬µ«²»ÄÜ¶à£©£¬Èç¹ûrestoreµ÷ÓÃ´ÎÊı±Èsave¶à£¬»áÒı·¢Error¡£saveºÍrestoreÖ®¼ä£¬ÍùÍù¼ĞÔÓµÄÊÇ¶ÔCanvasµÄÌØÊâ²Ù×÷¡£*
+ *saveå’Œrestoreè¦é…å¯¹ä½¿ç”¨ï¼ˆrestoreå¯ä»¥æ¯”saveå°‘ï¼Œä½†ä¸èƒ½å¤šï¼‰ï¼Œå¦‚æœrestoreè°ƒç”¨æ¬¡æ•°æ¯”saveå¤šï¼Œä¼šå¼•å‘Errorã€‚saveå’Œrestoreä¹‹é—´ï¼Œå¾€å¾€å¤¹æ‚çš„æ˜¯å¯¹Canvasçš„ç‰¹æ®Šæ“ä½œã€‚*
 
 ###clipXXX()
-ÔÚµ±Ç°µÄ»­Í¼ÇøÓò²Ã¼ô(clip)³öÒ»¸öĞÂµÄ»­Í¼ÇøÓò£¬Õâ¸ö»­Í¼ÇøÓò¾ÍÊÇcanvas¶ÔÏóµÄµ±Ç°»­Í¼ÇøÓòÁË¡£
+åœ¨å½“å‰çš„ç”»å›¾åŒºåŸŸè£å‰ª(clip)å‡ºä¸€ä¸ªæ–°çš„ç”»å›¾åŒºåŸŸï¼Œè¿™ä¸ªç”»å›¾åŒºåŸŸå°±æ˜¯canvaså¯¹è±¡çš„å½“å‰ç”»å›¾åŒºåŸŸäº†ã€‚
 ###drawXXX()
-ÒÔÒ»¶¨µÄ×ø±êÖµÔÚµ±Ç°»­Í¼ÇøÓò»­Í¼¡£
+ä»¥ä¸€å®šçš„åæ ‡å€¼åœ¨å½“å‰ç”»å›¾åŒºåŸŸç”»å›¾ã€‚
 ###translate(float dx, float dy)
 ###rotate(float degrees)
 
@@ -102,10 +102,10 @@ implements SurfaceHolder.Callback{
 #Drawable
 *something that can be drawn.*
 
-Drawable¾ÍÊÇÒ»¸ö¿É»­¶ÔÏóµÄ³éÏó¡£²»Í¬µÄ×ÊÔ´ÀàĞÍ´ú±í×Å²»Í¬µÄDrawableÀàĞÍ¡£AndroidÄÚÖÃÒÔÏÂ¼¸ÖÖDrawableÀàĞÍ£ºColorDrawable¡¢GradientDrawable¡¢BitmapDrawable¡¢ NinePatchDrawable¡¢InsetDrawable¡¢ClipDrawable¡¢ScaleDrawable¡¢RotateDrawable¡¢AnimationDrawable¡¢LayerDrawable¡¢LevelListDrawable¡¢StateListDrawable¡¢TransitionDrawable¡£
+Drawableå°±æ˜¯ä¸€ä¸ªå¯ç”»å¯¹è±¡çš„æŠ½è±¡ã€‚ä¸åŒçš„èµ„æºç±»å‹ä»£è¡¨ç€ä¸åŒçš„Drawableç±»å‹ã€‚Androidå†…ç½®ä»¥ä¸‹å‡ ç§Drawableç±»å‹ï¼šColorDrawableã€GradientDrawableã€BitmapDrawableã€ NinePatchDrawableã€InsetDrawableã€ClipDrawableã€ScaleDrawableã€RotateDrawableã€AnimationDrawableã€LayerDrawableã€LevelListDrawableã€StateListDrawableã€TransitionDrawableã€‚
 
 ##XML Bitmap
-BitmapDrawable ÊÇ¶ÔbitmapµÄÒ»ÖÖ°ü×°£¬¿ÉÒÔÉèÖÃËü°ü×°µÄbitmapÔÚBitmapDrawableÇøÓòÄÚµÄ»æÖÆ·½Ê½£¬ÈçÆ½ÆÌÌî³ä¡¢À­ÉìÌî³ä»òÕß±£³ÖÍ¼Æ¬Ô­Ê¼´óĞ¡£¬Ò²¿ÉÒÔÔÚBitmapDrawableÇøÓòÄÚ²¿Ê¹ÓÃgravityÖ¸¶¨µÄ¶ÔÆë·½Ê½¡£
+BitmapDrawable æ˜¯å¯¹bitmapçš„ä¸€ç§åŒ…è£…ï¼Œå¯ä»¥è®¾ç½®å®ƒåŒ…è£…çš„bitmapåœ¨BitmapDrawableåŒºåŸŸå†…çš„ç»˜åˆ¶æ–¹å¼ï¼Œå¦‚å¹³é“ºå¡«å……ã€æ‹‰ä¼¸å¡«å……æˆ–è€…ä¿æŒå›¾ç‰‡åŸå§‹å¤§å°ï¼Œä¹Ÿå¯ä»¥åœ¨BitmapDrawableåŒºåŸŸå†…éƒ¨ä½¿ç”¨gravityæŒ‡å®šçš„å¯¹é½æ–¹å¼ã€‚
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -121,14 +121,14 @@ BitmapDrawable ÊÇ¶ÔbitmapµÄÒ»ÖÖ°ü×°£¬¿ÉÒÔÉèÖÃËü°ü×°µÄbitmapÔÚBitmapDrawableÇøÓòÄ
     android:mipMap=["true" | "false"]
     android:tileMode=["disabled" | "clamp" | "repeat" | "mirror"] />
 ```
-- android:antialias	    ¾â³İĞ§¹û
-- android:dither	    µ±Í¼Æ¬ÏñËØºÍÆÁÄ»ÏñËØ²»Æ¥ÅäÊ±£¬ÊÇ·ñÆôÓÃ¶¶¶¯Ğ§¹û
-- android:filter    ¹ıÂËĞ§¹û
-- android:gravity Î»ÖÃ
+- android:antialias     é”¯é½¿æ•ˆæœ
+- android:dither        å½“å›¾ç‰‡åƒç´ å’Œå±å¹•åƒç´ ä¸åŒ¹é…æ—¶ï¼Œæ˜¯å¦å¯ç”¨æŠ–åŠ¨æ•ˆæœ
+- android:filter    è¿‡æ»¤æ•ˆæœ
+- android:gravity ä½ç½®
 - android:tileMode 
 
 ##XML Nine-Patch
-Android Æ½Ì¨ÌØÊâµÄÍ¼Æ¬¸ñÊ½ ¡°µã¾ÅÍ¼¡°£¬µ±Í¼Æ¬ĞèÒªÉìËõÊ±£¬¿ÉÒÔ°´ÕÕÎÒÃÇµÄĞèÇó·Å´óÍ¼Æ¬µÄÄ³¸ö²¿·Ö¡£
+Android å¹³å°ç‰¹æ®Šçš„å›¾ç‰‡æ ¼å¼ â€œç‚¹ä¹å›¾â€œï¼Œå½“å›¾ç‰‡éœ€è¦ä¼¸ç¼©æ—¶ï¼Œå¯ä»¥æŒ‰ç…§æˆ‘ä»¬çš„éœ€æ±‚æ”¾å¤§å›¾ç‰‡çš„æŸä¸ªéƒ¨åˆ†ã€‚
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -139,7 +139,7 @@ Android Æ½Ì¨ÌØÊâµÄÍ¼Æ¬¸ñÊ½ ¡°µã¾ÅÍ¼¡°£¬µ±Í¼Æ¬ĞèÒªÉìËõÊ±£¬¿ÉÒÔ°´ÕÕÎÒÃÇµÄĞèÇó·Å´óÍ
 ```
 
 ##Layer List
-LayerDrawable ¹ÜÀíÒ»×édrawable£¬Ã¿¸ödrawable¶¼´¦ÓÚ²»Í¬µÄ²ã£¬µ±ËüÃÇ±»»æÖÆµÄÊ±ºò£¬°´ÕÕË³ĞòÈ«²¿¶¼»æÖÆµ½»­²¼ÉÏ¡£ËäÈ»ÕâĞ©drawable»áÓĞ½»²î»òÕßÖØµşµÄÇøÓò£¬µ«ÊÇËüÃÇÊÇÎ»ÓÚ²»Í¬µÄ²ã£¬±Ë´ËÖ®¼ä²»»áÓ°Ïì¡£
+LayerDrawable ç®¡ç†ä¸€ç»„drawableï¼Œæ¯ä¸ªdrawableéƒ½å¤„äºä¸åŒçš„å±‚ï¼Œå½“å®ƒä»¬è¢«ç»˜åˆ¶çš„æ—¶å€™ï¼ŒæŒ‰ç…§é¡ºåºå…¨éƒ¨éƒ½ç»˜åˆ¶åˆ°ç”»å¸ƒä¸Šã€‚è™½ç„¶è¿™äº›drawableä¼šæœ‰äº¤å·®æˆ–è€…é‡å çš„åŒºåŸŸï¼Œä½†æ˜¯å®ƒä»¬æ˜¯ä½äºä¸åŒçš„å±‚ï¼Œå½¼æ­¤ä¹‹é—´ä¸ä¼šå½±å“ã€‚
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -154,7 +154,7 @@ LayerDrawable ¹ÜÀíÒ»×édrawable£¬Ã¿¸ödrawable¶¼´¦ÓÚ²»Í¬µÄ²ã£¬µ±ËüÃÇ±»»æÖÆµÄÊ±ºò£¬
         android:left="dimension" />
 </layer-list>
 ```
-itemÖĞµÄDrawableÄ¬ÈÏÉìËõµ½viewµÄ´óĞ¡£¬ÎªÁËÈÃitem±£³Ö´óĞ¡²»±ä¿ÉÒÔÔÚitemÖĞÌí¼Óbitmap½Úµã
+itemä¸­çš„Drawableé»˜è®¤ä¼¸ç¼©åˆ°viewçš„å¤§å°ï¼Œä¸ºäº†è®©itemä¿æŒå¤§å°ä¸å˜å¯ä»¥åœ¨itemä¸­æ·»åŠ bitmapèŠ‚ç‚¹
 
 ```xml
 <item>
@@ -187,11 +187,11 @@ res/drawable/layers.xml:
     android:layout_width="wrap_content"
     android:src="@drawable/layers" />
 ```
-Ğ§¹ûÍ¼ÈçÏÂ
-![ÕâÀïĞ´Í¼Æ¬ÃèÊö](http://img.blog.csdn.net/20150624184627758)
+æ•ˆæœå›¾å¦‚ä¸‹
+![è¿™é‡Œå†™å›¾ç‰‡æè¿°](http://img.blog.csdn.net/20150624184627758)
 
 ##State List
-StateListDrawable¹ÜÀíÒ»×édrawable£¬Ã¿Ò»¸ödrawable¶¼¶ÔÓ¦×ÅÒ»×é×´Ì¬£¬×´Ì¬µÄÑ¡ÔñÀàËÆÓÚjavaÖĞµÄswitch-case×éºÏ£¬°´ÕÕË³Ğò±È½Ï×´Ì¬£¬µ±Óöµ½Æ¥ÅäµÄ×´Ì¬ºó£¬¾Í·µ»Ø¶ÔÓ¦µÄdrawable£¬Òò´ËĞèÒª°Ñ×î¾«È·µÄÆ¥Åä·ÅÖÃÔÚ×îÇ°Ãæ£¬°´ÕÕ´Ó¾«È·µ½´ÖÂÔµÄË³ĞòÅÅÁĞ¡£
+StateListDrawableç®¡ç†ä¸€ç»„drawableï¼Œæ¯ä¸€ä¸ªdrawableéƒ½å¯¹åº”ç€ä¸€ç»„çŠ¶æ€ï¼ŒçŠ¶æ€çš„é€‰æ‹©ç±»ä¼¼äºjavaä¸­çš„switch-caseç»„åˆï¼ŒæŒ‰ç…§é¡ºåºæ¯”è¾ƒçŠ¶æ€ï¼Œå½“é‡åˆ°åŒ¹é…çš„çŠ¶æ€åï¼Œå°±è¿”å›å¯¹åº”çš„drawableï¼Œå› æ­¤éœ€è¦æŠŠæœ€ç²¾ç¡®çš„åŒ¹é…æ”¾ç½®åœ¨æœ€å‰é¢ï¼ŒæŒ‰ç…§ä»ç²¾ç¡®åˆ°ç²—ç•¥çš„é¡ºåºæ’åˆ—ã€‚
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -213,7 +213,7 @@ StateListDrawable¹ÜÀíÒ»×édrawable£¬Ã¿Ò»¸ödrawable¶¼¶ÔÓ¦×ÅÒ»×é×´Ì¬£¬×´Ì¬µÄÑ¡ÔñÀàË
 </selector>
 ```
 ##Level List
-¹ÜÀíÒ»×édrawable£¬Ã¿Ò»¸ödrawable¶¼¶ÔÓ¦Ò»¸ölevel·¶Î§£¬µ±ËüÃÇ±»»æÖÆµÄÊ±ºò£¬¸ù¾İlevelÊôĞÔÖµÑ¡È¡¶ÔÓ¦µÄÒ»¸ödrawable»æÖÆµ½»­²¼ÉÏ¡£ÉèÖÃµÄandroid:maxLevelµÄÖµ´óÓÚ»òµÈÓÚsetLevel()ÖµÊ±£¬Õâ¸ö×ÊÔ´¾Í»á±»¼ÓÔØ¡£
+ç®¡ç†ä¸€ç»„drawableï¼Œæ¯ä¸€ä¸ªdrawableéƒ½å¯¹åº”ä¸€ä¸ªlevelèŒƒå›´ï¼Œå½“å®ƒä»¬è¢«ç»˜åˆ¶çš„æ—¶å€™ï¼Œæ ¹æ®levelå±æ€§å€¼é€‰å–å¯¹åº”çš„ä¸€ä¸ªdrawableç»˜åˆ¶åˆ°ç”»å¸ƒä¸Šã€‚è®¾ç½®çš„android:maxLevelçš„å€¼å¤§äºæˆ–ç­‰äºsetLevel()å€¼æ—¶ï¼Œè¿™ä¸ªèµ„æºå°±ä¼šè¢«åŠ è½½ã€‚
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -239,7 +239,7 @@ StateListDrawable¹ÜÀíÒ»×édrawable£¬Ã¿Ò»¸ödrawable¶¼¶ÔÓ¦×ÅÒ»×é×´Ì¬£¬×´Ì¬µÄÑ¡ÔñÀàË
 ```
 
 ##Transition Drawable
-TransitionDrawable ÊÇLayerDrawableµÄ×ÓÀà£¬²»¹ıËüÖ»¸ºÔğ¹ÜÀíÁ½²ãdrawable£¬²¢ÇÒÌá¹©ÁËÒ»¸öÍ¸Ã÷¶È±ä»¯µÄ¶¯»­£¬¿ÉÒÔ¿ØÖÆ´ÓÒ»²ãdrawable¹ı¶Èµ½ÁíÍâÒ»²ãdrawableµÄ¶¯»­Ğ§¹û¡£
+TransitionDrawable æ˜¯LayerDrawableçš„å­ç±»ï¼Œä¸è¿‡å®ƒåªè´Ÿè´£ç®¡ç†ä¸¤å±‚drawableï¼Œå¹¶ä¸”æä¾›äº†ä¸€ä¸ªé€æ˜åº¦å˜åŒ–çš„åŠ¨ç”»ï¼Œå¯ä»¥æ§åˆ¶ä»ä¸€å±‚drawableè¿‡åº¦åˆ°å¦å¤–ä¸€å±‚drawableçš„åŠ¨ç”»æ•ˆæœã€‚
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -255,7 +255,7 @@ xmlns:android="http://schemas.android.com/apk/res/android" >
 </transition>
 ```
 
-EXAMPLE£º
+EXAMPLEï¼š
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -279,7 +279,7 @@ TransitionDrawable drawable = (TransitionDrawable) button.getDrawable();
 drawable.startTransition(500);
 ```
 ##Inset Drawable
-InsetDrawable ±íÊ¾Ò»¸ödrawableÇ¶Èëµ½ÁíÍâÒ»¸ödrawableÄÚ²¿£¬²¢ÇÒÔÚÄÚ²¿ÁôÒ»Ğ©¼ä¾à£¬ÕâÒ»µãºÜÏñdrawableµÄpaddingÊôĞÔ£¬Çø±ğÔÚÓÚ padding±íÊ¾drawableµÄÄÚÈİÓëdrawable±¾ÉíµÄ±ß¾à£¬insetDrawable±íÊ¾Á½¸ödrawableºÍÈİÆ÷Ö®¼äµÄ±ß¾à¡£µ±¿Ø¼şĞèÒªµÄ±³¾°±ÈÊµ¼ÊµÄ±ß¿òĞ¡µÄÊ±ºò±È½ÏÊÊºÏÊ¹ÓÃInsetDrawable¡£
+InsetDrawable è¡¨ç¤ºä¸€ä¸ªdrawableåµŒå…¥åˆ°å¦å¤–ä¸€ä¸ªdrawableå†…éƒ¨ï¼Œå¹¶ä¸”åœ¨å†…éƒ¨ç•™ä¸€äº›é—´è·ï¼Œè¿™ä¸€ç‚¹å¾ˆåƒdrawableçš„paddingå±æ€§ï¼ŒåŒºåˆ«åœ¨äº paddingè¡¨ç¤ºdrawableçš„å†…å®¹ä¸drawableæœ¬èº«çš„è¾¹è·ï¼ŒinsetDrawableè¡¨ç¤ºä¸¤ä¸ªdrawableå’Œå®¹å™¨ä¹‹é—´çš„è¾¹è·ã€‚å½“æ§ä»¶éœ€è¦çš„èƒŒæ™¯æ¯”å®é™…çš„è¾¹æ¡†å°çš„æ—¶å€™æ¯”è¾ƒé€‚åˆä½¿ç”¨InsetDrawableã€‚
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -293,7 +293,7 @@ InsetDrawable ±íÊ¾Ò»¸ödrawableÇ¶Èëµ½ÁíÍâÒ»¸ödrawableÄÚ²¿£¬²¢ÇÒÔÚÄÚ²¿ÁôÒ»Ğ©¼ä¾à£¬
 ```
 
 ##Clip Drawable
-ClipDrawable ÊÇ¶ÔÒ»¸öDrawable½øĞĞ¼ôÇĞ²Ù×÷£¬¿ÉÒÔ¿ØÖÆÕâ¸ödrawableµÄ¼ôÇĞÇøÓò£¬ÒÔ¼°ÏàÏà¶ÔÓÚÈİÆ÷µÄ¶ÔÆë·½Ê½£¬androidÖĞµÄ½ø¶ÈÌõ¾ÍÊÇÊ¹ÓÃÒ»¸öClipDrawableÊµÏÖĞ§¹ûµÄ£¬Ëü¸ù¾İlevelµÄÊôĞÔÖµ£¬¾ö¶¨¼ôÇĞÇøÓòµÄ´óĞ¡¡£
+ClipDrawable æ˜¯å¯¹ä¸€ä¸ªDrawableè¿›è¡Œå‰ªåˆ‡æ“ä½œï¼Œå¯ä»¥æ§åˆ¶è¿™ä¸ªdrawableçš„å‰ªåˆ‡åŒºåŸŸï¼Œä»¥åŠç›¸ç›¸å¯¹äºå®¹å™¨çš„å¯¹é½æ–¹å¼ï¼Œandroidä¸­çš„è¿›åº¦æ¡å°±æ˜¯ä½¿ç”¨ä¸€ä¸ªClipDrawableå®ç°æ•ˆæœçš„ï¼Œå®ƒæ ¹æ®levelçš„å±æ€§å€¼ï¼Œå†³å®šå‰ªåˆ‡åŒºåŸŸçš„å¤§å°ã€‚
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -306,7 +306,7 @@ ClipDrawable ÊÇ¶ÔÒ»¸öDrawable½øĞĞ¼ôÇĞ²Ù×÷£¬¿ÉÒÔ¿ØÖÆÕâ¸ödrawableµÄ¼ôÇĞÇøÓò£¬ÒÔ¼°Ï
                      "center" | "fill" | "clip_vertical" | "clip_horizontal"] />
 ```
 
-Àı×Ó£º
+ä¾‹å­ï¼š
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -329,12 +329,12 @@ ImageView imageview = (ImageView) findViewById(R.id.image);
 ClipDrawable drawable = (ClipDrawable) imageview.getDrawable();
 drawable.setLevel(drawable.getLevel() + 1000);
 ```
-![ÕâÀïĞ´Í¼Æ¬ÃèÊö](http://img.blog.csdn.net/20150624184435156)
+![è¿™é‡Œå†™å›¾ç‰‡æè¿°](http://img.blog.csdn.net/20150624184435156)
 
-ĞèÒª×¢ÒâµÄÊÇClipDrawableÊÇ¸ù¾İlevelµÄ´óĞ¡¿ØÖÆÍ¼Æ¬¼ôÇĞ²Ù×÷µÄ£¬¹Ù·½ÎÄµµµÄnoteÖĞÌáµ½£ºThe drawable is clipped completely and not visible when the level is 0 and fully revealed when the level is 10,000¡£Ò²¾ÍÊÇlevelµÄ´óĞ¡´Ó0µ½10000£¬levelÎª0Ê±ÍêÈ«²»ÏÔÊ¾£¬Îª10000Ê±ÍêÈ«ÏÔÊ¾¡£ÊÇÓÃDrawableÌá¹©µÄsetLevel£¨int level£©·½·¨À´ÉèÖÃ¼ôÇĞÇøÓò¡£
+éœ€è¦æ³¨æ„çš„æ˜¯ClipDrawableæ˜¯æ ¹æ®levelçš„å¤§å°æ§åˆ¶å›¾ç‰‡å‰ªåˆ‡æ“ä½œçš„ï¼Œå®˜æ–¹æ–‡æ¡£çš„noteä¸­æåˆ°ï¼šThe drawable is clipped completely and not visible when the level is 0 and fully revealed when the level is 10,000ã€‚ä¹Ÿå°±æ˜¯levelçš„å¤§å°ä»0åˆ°10000ï¼Œlevelä¸º0æ—¶å®Œå…¨ä¸æ˜¾ç¤ºï¼Œä¸º10000æ—¶å®Œå…¨æ˜¾ç¤ºã€‚æ˜¯ç”¨Drawableæä¾›çš„setLevelï¼ˆint levelï¼‰æ–¹æ³•æ¥è®¾ç½®å‰ªåˆ‡åŒºåŸŸã€‚
 
 ##Scale Drawable
-ScaleDrawableÊÇ¶ÔÒ»¸öDrawable½øĞĞËõ·Å²Ù×÷£¬¿ÉÒÔ¸ù¾İlevelÊôĞÔ¿ØÖÆÕâ¸ödrawableµÄËõ·Å±ÈÂÊ£¬Ò²¿ÉÒÔÉèÖÃËüÔÚÈİÆ÷ÖĞµÄ¶ÔÆë·½Ê½¡£
+ScaleDrawableæ˜¯å¯¹ä¸€ä¸ªDrawableè¿›è¡Œç¼©æ”¾æ“ä½œï¼Œå¯ä»¥æ ¹æ®levelå±æ€§æ§åˆ¶è¿™ä¸ªdrawableçš„ç¼©æ”¾æ¯”ç‡ï¼Œä¹Ÿå¯ä»¥è®¾ç½®å®ƒåœ¨å®¹å™¨ä¸­çš„å¯¹é½æ–¹å¼ã€‚
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -358,7 +358,7 @@ ScaleDrawableÊÇ¶ÔÒ»¸öDrawable½øĞĞËõ·Å²Ù×÷£¬¿ÉÒÔ¸ù¾İlevelÊôĞÔ¿ØÖÆÕâ¸ödrawableµÄËõ
 ```
 
 ##Shape Drawable
-µ±Ïë¶¯Ì¬»­¶şÎ¬Í¼ĞÎ£¬ShapeDrawable¶ÔÏóÊÇ¿ÉÄÜÊÇÄãºÏÊÊµÄÑ¡Ôñ£®Ê¹ÓÃShapeDrawable£¬Äã¿ÉÒÔËæÒâ»­³öÔ­Ê¼µÄĞÎ×´²¢ÇÒÓ¦ÓÃµ½ÈÎºÎ·ç¸ñ£®
+å½“æƒ³åŠ¨æ€ç”»äºŒç»´å›¾å½¢ï¼ŒShapeDrawableå¯¹è±¡æ˜¯å¯èƒ½æ˜¯ä½ åˆé€‚çš„é€‰æ‹©ï¼ä½¿ç”¨ShapeDrawableï¼Œä½ å¯ä»¥éšæ„ç”»å‡ºåŸå§‹çš„å½¢çŠ¶å¹¶ä¸”åº”ç”¨åˆ°ä»»ä½•é£æ ¼ï¼
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -401,22 +401,22 @@ ScaleDrawableÊÇ¶ÔÒ»¸öDrawable½øĞĞËõ·Å²Ù×÷£¬¿ÉÒÔ¸ù¾İlevelÊôĞÔ¿ØÖÆÕâ¸ödrawableµÄËõ
 
 
 #Bitmap
-Î»Í¼£¬Í¼Æ¬×ÊÔ´µÄ¶ş½øÖÆĞÎÊ½±£´æÔÚBitmapÀàÖĞ¡£¿ÉÒÔ¶ÔÍ¼Æ¬½øĞĞ¼ô²Ã£¬Ğı×ª£¬Ëõ·ÅµÈ²Ù×÷¡£
+ä½å›¾ï¼Œå›¾ç‰‡èµ„æºçš„äºŒè¿›åˆ¶å½¢å¼ä¿å­˜åœ¨Bitmapç±»ä¸­ã€‚å¯ä»¥å¯¹å›¾ç‰‡è¿›è¡Œå‰ªè£ï¼Œæ—‹è½¬ï¼Œç¼©æ”¾ç­‰æ“ä½œã€‚
 
-##»ñÈ¡Í¼Æ¬×ÊÔ´
-###Ê¹ÓÃBitmapDrawable
-Ê¹ÓÃBitmapDrawable (InputStream is)¹¹ÔìÒ»¸öBitmapDrawable£»
-Ê¹ÓÃBitmapDrawableÀàµÄgetBitmap()»ñÈ¡µÃµ½Î»Í¼£»
+##è·å–å›¾ç‰‡èµ„æº
+###ä½¿ç”¨BitmapDrawable
+ä½¿ç”¨BitmapDrawable (InputStream is)æ„é€ ä¸€ä¸ªBitmapDrawableï¼›
+ä½¿ç”¨BitmapDrawableç±»çš„getBitmap()è·å–å¾—åˆ°ä½å›¾ï¼›
 ```java
-// ¶ÁÈ¡InputStream²¢µÃµ½Î»Í¼
+// è¯»å–InputStreamå¹¶å¾—åˆ°ä½å›¾
 InputStream is=res.openRawResource(R.drawable.pic180);
 BitmapDrawable bmpDraw=new BitmapDrawable(is);
 Bitmap bmp=bmpDraw.getBitmap();
 ```
 
-###Ê¹ÓÃBitmapFactory
-BitmapÀàµÄ¹¹Ôìº¯ÊıÊÇË½ÓĞµÄ£¬ÍâÃæ²¢²»ÄÜÊµÀı»¯£¬ÏµÍ³¸øÎÒÃÇÌá¹©ÁËÒ»¸öBitmapFactory¹¹ÔìÀà¡£
-BitmapFactoryÓĞ¶àÖÖ¶ÁÈ¡Í¼Æ¬·½·¨£¬Ëû¿ÉÒÔ×ÊÔ´ID¡¢Â·¾¶¡¢ÎÄ¼ş¡¢Êı¾İÁ÷µÈ¶àÖÖĞÎÊ½»ñÈ¡Î»Í¼¡£
+###ä½¿ç”¨BitmapFactory
+Bitmapç±»çš„æ„é€ å‡½æ•°æ˜¯ç§æœ‰çš„ï¼Œå¤–é¢å¹¶ä¸èƒ½å®ä¾‹åŒ–ï¼Œç³»ç»Ÿç»™æˆ‘ä»¬æä¾›äº†ä¸€ä¸ªBitmapFactoryæ„é€ ç±»ã€‚
+BitmapFactoryæœ‰å¤šç§è¯»å–å›¾ç‰‡æ–¹æ³•ï¼Œä»–å¯ä»¥èµ„æºIDã€è·¯å¾„ã€æ–‡ä»¶ã€æ•°æ®æµç­‰å¤šç§å½¢å¼è·å–ä½å›¾ã€‚
 
 ```java
 static Bitmap decodeByteArray(byte[] data, int offset, int length, BitmapFactory.Options opts);
@@ -433,32 +433,32 @@ static Bitmap decodeStream(InputStream is, Rect outPadding, BitmapFactory.Option
 ```
 
 ###BitmapFacotry.Options
-ÔÚÊ¹ÓÃBitmapFactory.decodeº¯ÊıÊ±£¬»áÊ¹ÓÃOptionÑ¡Ïî¡£
+åœ¨ä½¿ç”¨BitmapFactory.decodeå‡½æ•°æ—¶ï¼Œä¼šä½¿ç”¨Optioné€‰é¡¹ã€‚
 
- - inPreferredConfig: Ö¸¶¨decodeµ½ÄÚ´æÖĞ£¬ÊÖ»úÖĞËù²ÉÓÃµÄ±àÂë£¬¿ÉÑ¡Öµ¶¨ÒåÔÚBitmap.ConfigÖĞ¡£È±Ê¡ÖµÊÇARGB_8888¡£
- - inJustDecodeBounds: Èç¹ûÉèÖÃÎªtrue£¬²»»ñÈ¡Í¼Æ¬£¬²»·ÖÅäÄÚ´æ£¬µ«»á·µ»ØÍ¼Æ¬µÄ¸ß¿í¶ÈĞÅÏ¢¡£
- - inSampleSize: ÉèÖÃdecodeÊ±µÄËõ·Å±ÈÀı¡£
- - outHeight : »ñÈ¡Í¼Æ¬µÄ¸ß¶È
- - outWidth :    »ñÈ¡Í¼Æ¬µÄ¿í¶È
- - inDensity:    Î»Í¼µÄÏñËØÑ¹Ëõ±È
- - TargetDensity:ÓÃÓÚÄ¿±êÎ»Í¼µÄÏñËØÑ¹Ëõ±È£¨ÒªÉú³ÉµÄÎ»Í¼£©
- - inScaled:ÉèÖÃÎªtrueÊ±½øĞĞÍ¼Æ¬Ñ¹Ëõ£¬´ÓinDensityµ½inTargetDensity¡£
-¶ÁÈ¡Ò»¸öÎÄ¼şÂ·¾¶µÃµ½Ò»¸öÎ»Í¼¡£Èç¹ûÖ¸¶¨ÎÄ¼şÎª¿Õ»òÕß²»ÄÜ½âÂë³ÉÎÄ¼ş£¬Ôò·µ»ØNULL¡£
+ - inPreferredConfig: æŒ‡å®šdecodeåˆ°å†…å­˜ä¸­ï¼Œæ‰‹æœºä¸­æ‰€é‡‡ç”¨çš„ç¼–ç ï¼Œå¯é€‰å€¼å®šä¹‰åœ¨Bitmap.Configä¸­ã€‚ç¼ºçœå€¼æ˜¯ARGB_8888ã€‚
+ - inJustDecodeBounds: å¦‚æœè®¾ç½®ä¸ºtrueï¼Œä¸è·å–å›¾ç‰‡ï¼Œä¸åˆ†é…å†…å­˜ï¼Œä½†ä¼šè¿”å›å›¾ç‰‡çš„é«˜å®½åº¦ä¿¡æ¯ã€‚
+ - inSampleSize: è®¾ç½®decodeæ—¶çš„ç¼©æ”¾æ¯”ä¾‹ã€‚
+ - outHeight : è·å–å›¾ç‰‡çš„é«˜åº¦
+ - outWidth :    è·å–å›¾ç‰‡çš„å®½åº¦
+ - inDensity:    ä½å›¾çš„åƒç´ å‹ç¼©æ¯”
+ - TargetDensity:ç”¨äºç›®æ ‡ä½å›¾çš„åƒç´ å‹ç¼©æ¯”ï¼ˆè¦ç”Ÿæˆçš„ä½å›¾ï¼‰
+ - inScaled:è®¾ç½®ä¸ºtrueæ—¶è¿›è¡Œå›¾ç‰‡å‹ç¼©ï¼Œä»inDensityåˆ°inTargetDensityã€‚
+è¯»å–ä¸€ä¸ªæ–‡ä»¶è·¯å¾„å¾—åˆ°ä¸€ä¸ªä½å›¾ã€‚å¦‚æœæŒ‡å®šæ–‡ä»¶ä¸ºç©ºæˆ–è€…ä¸èƒ½è§£ç æˆæ–‡ä»¶ï¼Œåˆ™è¿”å›NULLã€‚
 
-###¼ÓÔØ´óÍ¼Æ¬£¨ËõÂÔÍ¼£©
-µ±ÎÒÃÇ¼ÓÔØ´óÍ¼Æ¬Ê±£¬¾­³£³öÏÖOut of Memory Error¡£ÕâÊ±ºòÎÒÃÇÓ¦¸ÃÊÊµ±Ñ¹ËõÍ¼Æ¬ºó¼ÓÔØ¡£BitmapFactory.OptionsÉèÖÃinJustDecodeBoundsÎªtrueºó£¬ÔÙÊ¹ÓÃdecodeFile()µÈ·½·¨£¬¿ÉÒÔÔÚ²»·ÖÅä¿Õ¼ä×´Ì¬ÏÂ¼ÆËã³öÍ¼Æ¬µÄ´óĞ¡¡£
+###åŠ è½½å¤§å›¾ç‰‡ï¼ˆç¼©ç•¥å›¾ï¼‰
+å½“æˆ‘ä»¬åŠ è½½å¤§å›¾ç‰‡æ—¶ï¼Œç»å¸¸å‡ºç°Out of Memory Errorã€‚è¿™æ—¶å€™æˆ‘ä»¬åº”è¯¥é€‚å½“å‹ç¼©å›¾ç‰‡ååŠ è½½ã€‚BitmapFactory.Optionsè®¾ç½®inJustDecodeBoundsä¸ºtrueåï¼Œå†ä½¿ç”¨decodeFile()ç­‰æ–¹æ³•ï¼Œå¯ä»¥åœ¨ä¸åˆ†é…ç©ºé—´çŠ¶æ€ä¸‹è®¡ç®—å‡ºå›¾ç‰‡çš„å¤§å°ã€‚
 
 ```java
 ImageView largeImage = (ImageView) findViewById(R.id.imageView1);
-/*»ñµÃÆÁÄ»µÄÏñËØ*/
+/*è·å¾—å±å¹•çš„åƒç´ */
 Display display = getWindowManager().getDefaultDisplay();
 int displayWidth = display.getWidth();  
-/*¶ÁÈ¡Ô­Ê¼Í¼Æ¬ÏñËØ´óĞ¡*/
+/*è¯»å–åŸå§‹å›¾ç‰‡åƒç´ å¤§å°*/
 BitmapFactory.Options options = new BitmapFactory.Options();
-options.inJustDecodeBounds = true; //²»·ÖÅä¿Õ¼ä×´Ì¬ÏÂ¼ÆËã³öÍ¼Æ¬µÄ´óĞ¡
+options.inJustDecodeBounds = true; //ä¸åˆ†é…ç©ºé—´çŠ¶æ€ä¸‹è®¡ç®—å‡ºå›¾ç‰‡çš„å¤§å°
 BitmapFactory.decodeResource(getResources(), R.drawable.largeimage, options);
 int width = options.outWidth;
-/*¸ù¾İÆÁÄ»¿í¶ÈÏñËØºÍÍ¼Æ¬¿í¶ÈÏñËØÀ´¾ö¶¨Ñ¹Ëõ±ÈÀı*/
+/*æ ¹æ®å±å¹•å®½åº¦åƒç´ å’Œå›¾ç‰‡å®½åº¦åƒç´ æ¥å†³å®šå‹ç¼©æ¯”ä¾‹*/
 if (width > displayWidth) {
   int widthRatio = Math.round((float) width / (float) displayWidth);
   options.inSampleSize = widthRatio;
@@ -467,22 +467,22 @@ options.inJustDecodeBounds = false;
 Bitmap scaledBitmap =  BitmapFactory.decodeResource(getResources(), R.drawable.largeimage, options);
 largeImage.setImageBitmap(scaledBitmap);
 ```
-##ÏÔÊ¾Î»Í¼
-×ª»»ÎªBitmapDrawable¶ÔÏóÏÔÊ¾Î»Í¼
+##æ˜¾ç¤ºä½å›¾
+è½¬æ¢ä¸ºBitmapDrawableå¯¹è±¡æ˜¾ç¤ºä½å›¾
 
 ```java
- // »ñÈ¡Î»Í¼
+ // è·å–ä½å›¾
  Bitmap bmp=BitmapFactory.decodeResource(res, R.drawable.pic180);
- // ×ª»»ÎªBitmapDrawable¶ÔÏó
+ // è½¬æ¢ä¸ºBitmapDrawableå¯¹è±¡
  BitmapDrawable bmpDraw=new BitmapDrawable(bmp);
- // ÏÔÊ¾Î»Í¼
+ // æ˜¾ç¤ºä½å›¾
  ImageView iv2 = (ImageView)findViewById(R.id.ImageView02);
  iv2.setImageDrawable(bmpDraw);
 ```
-Ê¹ÓÃCanvasÀàÏÔÊ¾Î»Í¼
+ä½¿ç”¨Canvasç±»æ˜¾ç¤ºä½å›¾
 
 ```java
-class Panel extends View{     	  
+class Panel extends View{         
         public Panel(Context context) {  
             super(context); 
         }      
@@ -493,16 +493,16 @@ class Panel extends View{
         }  
     } 
 ```
-##Î»Í¼Ëõ·ÅÓëMatrix 
-Î»Í¼µÄËõ·Å£¬ÔÚAndroid SDKÖĞÌá¹©ÁË2ÖÖ·½·¨£º
+##ä½å›¾ç¼©æ”¾ä¸Matrix 
+ä½å›¾çš„ç¼©æ”¾ï¼Œåœ¨Android SDKä¸­æä¾›äº†2ç§æ–¹æ³•ï¼š
 
- 1. ½«Ò»¸öÎ»Í¼°´ÕÕĞèÇóÖØ»­Ò»±é£¬»­ºóµÄÎ»Í¼¾ÍÊÇÎÒÃÇĞèÒªµÄÁË£¬ÓëÎ»Í¼µÄÏÔÊ¾¼¸ºõÒ»Ñù¡£
+ 1. å°†ä¸€ä¸ªä½å›¾æŒ‰ç…§éœ€æ±‚é‡ç”»ä¸€éï¼Œç”»åçš„ä½å›¾å°±æ˜¯æˆ‘ä»¬éœ€è¦çš„äº†ï¼Œä¸ä½å›¾çš„æ˜¾ç¤ºå‡ ä¹ä¸€æ ·ã€‚
  `  drawBitmap(Bitmap bitmap, Rect src, Rect dst, Paint paint);`
  
 
 
 
- 2. ÔÚÔ­ÓĞÎ»Í¼µÄ»ù´¡ÉÏ£¬Ëõ·ÅÔ­Î»Í¼£¬´´½¨Ò»¸öĞÂµÄÎ»Í¼£º
+ 2. åœ¨åŸæœ‰ä½å›¾çš„åŸºç¡€ä¸Šï¼Œç¼©æ”¾åŸä½å›¾ï¼Œåˆ›å»ºä¸€ä¸ªæ–°çš„ä½å›¾ï¼š
 ```java
 public static Bitmap createBitmap(Bitmap source, int x, int y, intwidth, int height,
             Matrix m, boolean filter)
@@ -510,8 +510,8 @@ public static Bitmap createBitmap(Bitmap source, int x, int y, intwidth, int hei
 public static Bitmap createScaledBitmap(Bitmap src, int dstWidth,
             int dstHeight,boolean filter)
 ```
-µÚÒ»¸ö·½·¨ÊÇ×îÖÕµÄÊµÏÖ£¬ºóÁ½ÖÖÖ»ÊÇ¶ÔµÚÒ»ÖÖ·½·¨µÄ·â×°¡£
-µÚ¶ş¸ö·½·¨¿ÉÒÔ´ÓÔ´BitmapÖĞÖ¸¶¨ÇøÓò(x,y, width, height)ÖĞÍÚ³öÒ»¿éÀ´ÊµÏÖ¼ôÇĞ£»µÚÈı¸ö·½·¨¿ÉÒÔ°ÑÔ´BitmapËõ·ÅÎªdstWidth X dstHeightµÄBitmap¡£
+ç¬¬ä¸€ä¸ªæ–¹æ³•æ˜¯æœ€ç»ˆçš„å®ç°ï¼Œåä¸¤ç§åªæ˜¯å¯¹ç¬¬ä¸€ç§æ–¹æ³•çš„å°è£…ã€‚
+ç¬¬äºŒä¸ªæ–¹æ³•å¯ä»¥ä»æºBitmapä¸­æŒ‡å®šåŒºåŸŸ(x,y, width, height)ä¸­æŒ–å‡ºä¸€å—æ¥å®ç°å‰ªåˆ‡ï¼›ç¬¬ä¸‰ä¸ªæ–¹æ³•å¯ä»¥æŠŠæºBitmapç¼©æ”¾ä¸ºdstWidth X dstHeightçš„Bitmapã€‚
 
 ```java
 Bitmap bmp =BitmapFactory.decodeResource(getResources(), R.drawable.pic180);   
@@ -522,21 +522,21 @@ bmp.getHeight(),matrix,true);
 canvas.drawColor(Color.BLACK);     
 canvas.drawBitmap(dstbmp,10, 10, null); 
 ```
-MatrixÎª¾ØÕóµÄÒâË¼£¬Ò»°ãÓÃÀ´ÓëBitmapÅäºÏ£¬ÊµÏÖÍ¼ÏñµÄËõ·Å¡¢±äĞÎ¡¢Å¤ÇúµÈ²Ù×÷¡£
-MatrixÌá¹©ÁËÒ»Ğ©·½·¨À´¿ØÖÆÍ¼Æ¬±ä»»£º
+Matrixä¸ºçŸ©é˜µçš„æ„æ€ï¼Œä¸€èˆ¬ç”¨æ¥ä¸Bitmapé…åˆï¼Œå®ç°å›¾åƒçš„ç¼©æ”¾ã€å˜å½¢ã€æ‰­æ›²ç­‰æ“ä½œã€‚
+Matrixæä¾›äº†ä¸€äº›æ–¹æ³•æ¥æ§åˆ¶å›¾ç‰‡å˜æ¢ï¼š
 
 ```
-setTranslate(float dx,float dy);    //¿ØÖÆMatrix½øĞĞÎ»ÒÆ¡£
-setSkew(float kx,float ky);    //¿ØÖÆMatrix½øĞĞÇãĞ±£¬kx¡¢kyÎªX¡¢Y·½ÏòÉÏµÄ±ÈÀı¡£
-setSkew(float kx,float ky,float px,float py);    //¿ØÖÆMatrixÒÔpx¡¢pyÎªÖáĞÄ½øĞĞÇãĞ±£¬kx¡¢kyÎªX¡¢Y·½ÏòÉÏµÄÇãĞ±±ÈÀı¡£
-setRotate(float degrees);    //¿ØÖÆMatrix½øĞĞdepress½Ç¶ÈµÄĞı×ª£¬ÖáĞÄÎª£¨0,0£©¡£
-setRotate(float degrees,float px,float py);    //¿ØÖÆMatrix½øĞĞdepress½Ç¶ÈµÄĞı×ª£¬ÖáĞÄÎª(px,py)¡£
-setScale(float sx,float sy);    //ÉèÖÃMatrix½øĞĞËõ·Å£¬sx¡¢syÎªX¡¢Y·½ÏòÉÏµÄËõ·Å±ÈÀı¡£
-setScale(float sx,float sy,float px,float py);    //ÉèÖÃMatrixÒÔ(px,py)ÎªÖáĞÄ½øĞĞËõ·Å£¬sx¡¢syÎªX¡¢Y·½ÏòÉÏµÄËõ·Å±ÈÀı¡£
+setTranslate(float dx,float dy);    //æ§åˆ¶Matrixè¿›è¡Œä½ç§»ã€‚
+setSkew(float kx,float ky);    //æ§åˆ¶Matrixè¿›è¡Œå€¾æ–œï¼Œkxã€kyä¸ºXã€Yæ–¹å‘ä¸Šçš„æ¯”ä¾‹ã€‚
+setSkew(float kx,float ky,float px,float py);    //æ§åˆ¶Matrixä»¥pxã€pyä¸ºè½´å¿ƒè¿›è¡Œå€¾æ–œï¼Œkxã€kyä¸ºXã€Yæ–¹å‘ä¸Šçš„å€¾æ–œæ¯”ä¾‹ã€‚
+setRotate(float degrees);    //æ§åˆ¶Matrixè¿›è¡Œdepressè§’åº¦çš„æ—‹è½¬ï¼Œè½´å¿ƒä¸ºï¼ˆ0,0ï¼‰ã€‚
+setRotate(float degrees,float px,float py);    //æ§åˆ¶Matrixè¿›è¡Œdepressè§’åº¦çš„æ—‹è½¬ï¼Œè½´å¿ƒä¸º(px,py)ã€‚
+setScale(float sx,float sy);    //è®¾ç½®Matrixè¿›è¡Œç¼©æ”¾ï¼Œsxã€syä¸ºXã€Yæ–¹å‘ä¸Šçš„ç¼©æ”¾æ¯”ä¾‹ã€‚
+setScale(float sx,float sy,float px,float py);    //è®¾ç½®Matrixä»¥(px,py)ä¸ºè½´å¿ƒè¿›è¡Œç¼©æ”¾ï¼Œsxã€syä¸ºXã€Yæ–¹å‘ä¸Šçš„ç¼©æ”¾æ¯”ä¾‹ã€‚
 ```
 
-»¹ÓĞ¼¸µãĞèÒª¶îÍâ×¢ÒâÒ»ÏÂ£º
+è¿˜æœ‰å‡ ç‚¹éœ€è¦é¢å¤–æ³¨æ„ä¸€ä¸‹ï¼š
 
-- ¶ÔÓÚÒ»¸ö´ÓBitmapFactory.decodeXxx()·½·¨¼ÓÔØµÄBitmap¶ÔÏó¶øÑÔ£¬ËüÊÇÒ»¸öÖ»¶ÁµÄ£¬ÎŞ·¨¶ÔÆä½øĞĞ´¦Àí£¬±ØĞëÊ¹ÓÃBitmap.createBitmap()·½·¨ÖØĞÂ´´½¨Ò»¸öBitmap¶ÔÏóµÄ¿½±´£¬²Å¿ÉÒÔ¶Ô¿½±´µÄBitmap½øĞĞ´¦Àí¡£
-- ÒòÎªÍ¼ÏñµÄ±ä»»ÊÇÕë¶ÔÃ¿Ò»¸öÏñËØµãµÄ£¬ËùÒÔÓĞĞ©±ä»»¿ÉÄÜ·¢ÉúÏñËØµãµÄ¶ªÊ§£¬ÕâÀïĞèÒªÊ¹ÓÃPaint.setAnitiAlias(boolean)ÉèÖÃÀ´Ïû³ı¾â³İ£¬ÕâÑùÍ¼Æ¬±ä»»ºóµÄĞ§¹û»áºÃºÜ¶à¡£
-- ÔÚÖØĞÂ´´½¨Ò»¸öBitmap¶ÔÏóµÄ¿½±´µÄÊ±ºò£¬ĞèÒª×¢ÒâËüµÄ¿í¸ß£¬Èç¹ûÉèÖÃ²»Í×£¬ºÜ¿ÉÄÜ±ä»»ºóµÄÏñËØµãÒÑ¾­ÒÆ¶¯µ½"Í¼Æ¬Ö®Íâ"È¥ÁË¡£
+- å¯¹äºä¸€ä¸ªä»BitmapFactory.decodeXxx()æ–¹æ³•åŠ è½½çš„Bitmapå¯¹è±¡è€Œè¨€ï¼Œå®ƒæ˜¯ä¸€ä¸ªåªè¯»çš„ï¼Œæ— æ³•å¯¹å…¶è¿›è¡Œå¤„ç†ï¼Œå¿…é¡»ä½¿ç”¨Bitmap.createBitmap()æ–¹æ³•é‡æ–°åˆ›å»ºä¸€ä¸ªBitmapå¯¹è±¡çš„æ‹·è´ï¼Œæ‰å¯ä»¥å¯¹æ‹·è´çš„Bitmapè¿›è¡Œå¤„ç†ã€‚
+- å› ä¸ºå›¾åƒçš„å˜æ¢æ˜¯é’ˆå¯¹æ¯ä¸€ä¸ªåƒç´ ç‚¹çš„ï¼Œæ‰€ä»¥æœ‰äº›å˜æ¢å¯èƒ½å‘ç”Ÿåƒç´ ç‚¹çš„ä¸¢å¤±ï¼Œè¿™é‡Œéœ€è¦ä½¿ç”¨Paint.setAnitiAlias(boolean)è®¾ç½®æ¥æ¶ˆé™¤é”¯é½¿ï¼Œè¿™æ ·å›¾ç‰‡å˜æ¢åçš„æ•ˆæœä¼šå¥½å¾ˆå¤šã€‚
+- åœ¨é‡æ–°åˆ›å»ºä¸€ä¸ªBitmapå¯¹è±¡çš„æ‹·è´çš„æ—¶å€™ï¼Œéœ€è¦æ³¨æ„å®ƒçš„å®½é«˜ï¼Œå¦‚æœè®¾ç½®ä¸å¦¥ï¼Œå¾ˆå¯èƒ½å˜æ¢åçš„åƒç´ ç‚¹å·²ç»ç§»åŠ¨åˆ°"å›¾ç‰‡ä¹‹å¤–"å»äº†ã€‚
