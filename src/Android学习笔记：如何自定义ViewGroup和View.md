@@ -28,9 +28,11 @@ onDraw():
                 getDefaultSize(getSuggestedMinimumHeight(), heightMeasureSpec));
     }
 ```
+
 通常一个自定义的ViewGroup实现：
 
-```
+
+``` java
 //某个ViewGroup类型的视图  
 protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {  
 
@@ -54,7 +56,7 @@ protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 ###onLayout 指定childView的位置
 在onLayout()函数中完成对所有childView的位置及大小的指定。
 
-```
+``` java
 protected void onLayout(boolean changed, int left, int top, int right, int bottom) {  
 
     final int count = getChildCount();
@@ -79,7 +81,7 @@ View通过LayoutParams类告诉其父视图它想要地大小(即，长度和宽
 因此，每个View都包含一个ViewGroup.LayoutParams类或者其派生类，View类依赖于ViewGroup.LayoutParams
 ViewGroup子类可以实现自定义LayoutParams，自定义LayoutParams提供了更好地扩展性。 
 
-```
+``` java
 public class CascadeLayout extends ViewGroup {
 
    ...
